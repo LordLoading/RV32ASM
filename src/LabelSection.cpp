@@ -7,7 +7,7 @@
 
 class LabelSection {
     public:
-        std::string name;
+        std::string name = "";
         std::vector<std::string> lines;
         std::string data = "";
         int dataSize = 0;

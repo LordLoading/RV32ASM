@@ -83,7 +83,6 @@ int getLineSize(std::string line) {
     if (getFirstWord(line) == ".byte") return 1;
     if (getFirstWord(line) == ".half") return 2;
     if (getFirstWord(line) == ".word") return 4;
-    if (getFirstWord(line) == ".dword") return 8;
     if (getFirstWord(line) == ".string") {
         int firstChar = line.find_first_of("\"");
         int secondChar = line.find("\"", firstChar + 1);

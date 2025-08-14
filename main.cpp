@@ -61,33 +61,36 @@ int main(int argc, char* argv[]) {
         lines.push_back(line);
     }
 
-    LabelSection currentLabel;
+    LabelSection currentLabel = LabelSection("");
     std::vector<LabelSection> labels;
 
     // create label sections
     for (int i = 0; i < lines.size(); ++i) {
-        std::string line = lines[i];
-        if (std::regex_match(line, std::regex(".*:"))) {
-            if (currentLabel.name.size() > 0) labels.push_back(currentLabel);
-
-            std::string labelName = line.substr(0, line.find(":"));
+        std::string currentLine = lines[i];
+        if (std::regex_match(currentLine, std::regex(".*:"))) {
+            labels.push_back(currentLabel);
+            std::string labelName = currentLine.substr(0, currentLine.find(":"));
             currentLabel = LabelSection(labelName);
+
             continue;
-        } else if (std::regex_match(line, std::regex("#.*"))) continue;
-        else if (std::regex_match(line, std::regex("[\t ]*\n"))) continue;
-        else currentLabel.lines.push_back(line);
+        }
+        if (std::regex_match(currentLine, std::regex("[\t ]*#.*"))) continue;
+        if (std::regex_match(currentLine, std::regex("[\t ]*"))) continue;
+        currentLabel.lines.push_back(currentLine);
     }
+
+    labels.push_back(currentLabel);
 
     // figure out section sizes
     for (int i = 0; i < labels.size(); ++i) {
         LabelSection label = labels[i];
+        std::cout << label.name << " ";
         for (int j = 0; j < label.lines.size(); ++j) {
             std::string currentLine = label.lines[j];
-            std::cout << getLineSize(currentLine) << std::endl;
+            label.dataSize += getLineSize(currentLine);
         }
+        std::cout << label.dataSize << "\n";
     }
-
-    //test
 
     return 0;
 }

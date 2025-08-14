@@ -1,5 +1,8 @@
-word:
+struct:
     .word 0xc
+    .half 0xffff
+    .word 0xa
+    .string "test"
 word2:
     .word 0xd0
 half:
@@ -16,3 +19,8 @@ main:
 
     addi x2, x1, 1
     addi x4, x3, 1
+
+balls:
+    .byte 0xab
+string:
+    .string "fe"
