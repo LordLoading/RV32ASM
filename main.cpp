@@ -84,13 +84,8 @@ int main(int argc, char* argv[]) {
 
     labels.push_back(currentLabel);
 
-    // figure out section sizes
-    for (LabelSection label : labels) {
-        label.calculateSize();
-    }
-
     // figure out order of labels
-    std::vector<LabelSection> sortedLabels = labels;
+    std::vector<LabelSection> sortedLabels;
     // always move the "main" label to the start of the program
     for (int i = 0; i < labels.size(); ++i) {
         LabelSection label = labels[i];
@@ -112,24 +107,18 @@ int main(int argc, char* argv[]) {
         }
     }
     // push the rest after (only data left so no need to keep sorting)
-    for (int i = 0; i < labels.size(); ++i) {
-        LabelSection label = labels[i];
-
-        sortedLabels.push_back(label);
-        labels.erase(labels.begin() + i);
+    for (LabelSection currentLabel : labels) {
+        sortedLabels.push_back(currentLabel);
     }
 
-    //figure out sizes and adresses
-    for (int i = 0; i < sortedLabels.size(); ++i) {
-        LabelSection label = sortedLabels[i];
-        label.calculateSize();
+    //figure out addresses
+    for (int i = 0; i < sortedLabels.size(); i++) {
+        sortedLabels[i].calculateSize();
 
         if (i > 0) {
             LabelSection prevLabel = sortedLabels[i - 1];
-            label.address = prevLabel.address + prevLabel.dataSize;
+            sortedLabels[i].address = prevLabel.address + prevLabel.dataSize;
         }
-
-        std::cout << label.name << " " << label.address << " " << label.dataSize << "\n";
     }
 
     return 0;
