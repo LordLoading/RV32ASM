@@ -83,12 +83,16 @@ namespace Utils {
         return str.substr(0, str.find_first_of("\t "));
     }
 
-    bool isInstruction(std::string str) {
-        for (instruction inst : instructions) {
-            if (inst.name == getFirstWord(str)) return true;
+    bool isInstruction(const std::string& str) {
+        bool found = false;
+        for (const instruction& inst : instructions) {
+            if (inst.name == getFirstWord(str)) {
+                found = true;
+                break;
+            }
         }
 
-        return false;
+        return found;
     };
 
     int getLineSize(std::string line) {

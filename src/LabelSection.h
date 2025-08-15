@@ -34,11 +34,13 @@ class LabelSection {
         }
 
         bool isText() {
-            for (std::string currentLine : this->lines) {
-                if (Utils::isInstruction(currentLine)) return true;
+            bool found = false;
+            for (const std::string& currentLine : this->lines) {
+                if (Utils::isInstruction(currentLine)) {
+                    found = true;
+                }
             }
-
-            return false;
+            return found;
         }
 };
 

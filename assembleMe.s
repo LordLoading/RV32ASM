@@ -12,6 +12,9 @@ half:
     #test comment 2
      #test
 
+routine:
+    addi x2
+
 main:
     lw   x1, 0(word)
     lw   x3, 0(word2)
