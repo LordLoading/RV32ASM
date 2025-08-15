@@ -8,7 +8,7 @@
 #include "src/Utils.h"
 #include "src/LabelSection.h"
 
-
+// the code from here...
 void printUsage(const char* progName) {
     std::cout << "Usage: " << progName << " [options]\n\n"
               << "Options:\n"
@@ -54,6 +54,7 @@ int main(int argc, char* argv[]) {
         std::cerr << "Error: cannot open input file '" << inputFile << "'\n";
         return 1;
     }
+    // ... to here was stolen from zOnlyKroks's assembler cos i was too lazy ._.
 
     std::vector<std::string> lines;
     std::string line;
