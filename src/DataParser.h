@@ -4,6 +4,9 @@
 
 #ifndef DATAPARSER_H
 #define DATAPARSER_H
+
+#pragma once
+
 #include <bitset>
 #include <cstring>
 #include <string>

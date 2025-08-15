@@ -5,8 +5,8 @@
 #include <iomanip>
 #include <regex>
 
-#include "src/LabelSection.cpp"
-#include "src/utils.h"
+#include "src/Utils.h"
+#include "src/LabelSection.h"
 
 
 void printUsage(const char* progName) {
@@ -61,14 +61,16 @@ int main(int argc, char* argv[]) {
         lines.push_back(line);
     }
 
-    LabelSection currentLabel = LabelSection("");
+    LabelSection currentLabel = LabelSection();
     std::vector<LabelSection> labels;
 
     // create label sections
-    for (int i = 0; i < lines.size(); ++i) {
-        std::string currentLine = lines[i];
+    for (std::string currentLine : lines) {
         if (std::regex_match(currentLine, std::regex(".*:"))) {
-            labels.push_back(currentLabel);
+            if (currentLabel.name != "") {
+                labels.push_back(currentLabel);
+            }
+
             std::string labelName = currentLine.substr(0, currentLine.find(":"));
             currentLabel = LabelSection(labelName);
 
@@ -82,14 +84,31 @@ int main(int argc, char* argv[]) {
     labels.push_back(currentLabel);
 
     // figure out section sizes
+    for (LabelSection label : labels) {
+        label.calculateSize();
+    }
+
+    // figure out order of labels
+    std::vector<LabelSection> sortedLabels = labels;
+    //always move the "main" label to the start of the program
     for (int i = 0; i < labels.size(); ++i) {
         LabelSection label = labels[i];
-        std::cout << label.name << " ";
-        for (int j = 0; j < label.lines.size(); ++j) {
-            std::string currentLine = label.lines[j];
-            label.dataSize += getLineSize(currentLine);
+
+        if (label.name == "main") {
+            labels.erase(labels.begin() + i);
+            sortedLabels.push_back(label);
+            label.address = 0;
+            break;
         }
-        std::cout << label.dataSize << "\n";
+    }
+    //move the text sections before the data sections
+    for (int i = 0; i < labels.size(); ++i) {
+        LabelSection label = labels[i];
+
+        if (label.isText() == true) {
+            labels.erase(labels.begin() + i);
+            sortedLabels.push_back(label);
+        }
     }
 
     return 0;

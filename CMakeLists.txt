@@ -5,6 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(RV32ASM main.cpp
         src/DataParser.h
-        src/LabelSection.cpp
+        src/LabelSection.h
         src/utils.h
 )
