@@ -5,6 +5,8 @@
 #ifndef INSTRUCTIONUTILS_H
 #define INSTRUCTIONUTILS_H
 
+#pragma once
+
 namespace iUtils {
     std::vector<std::string> regs = {
         "zero",
@@ -66,32 +68,32 @@ struct instruction {
 
     std::vector<instruction> instructions = {
         //alu
-        {"add",     "r", 0b0110011, 0x0, 0x00},
-        {"sub",     "r", 0b0110011, 0x0, 0x20},
-        {"xor",     "r", 0b0110011, 0x4, 0x00},
-        {"or",      "r", 0b0110011, 0x6, 0x00},
-        {"and",     "r", 0b0110011, 0x7, 0x00},
-        {"sll",     "r", 0b0110011, 0x1, 0x00},
-        {"srl",     "r", 0b0110011, 0x5, 0x00},
-        {"sra",     "r", 0b0110011, 0x5, 0x20},
-        {"slt",     "r", 0b0110011, 0x2, 0x00},
-        {"sltu",    "r", 0b0110011, 0x3, 0x00},
+        {"add",     "ralu", 0b0110011, 0x0, 0x00},
+        {"sub",     "ralu", 0b0110011, 0x0, 0x20},
+        {"xor",     "ralu", 0b0110011, 0x4, 0x00},
+        {"or",      "ralu", 0b0110011, 0x6, 0x00},
+        {"and",     "ralu", 0b0110011, 0x7, 0x00},
+        {"sll",     "ralu", 0b0110011, 0x1, 0x00},
+        {"srl",     "ralu", 0b0110011, 0x5, 0x00},
+        {"sra",     "ralu", 0b0110011, 0x5, 0x20},
+        {"slt",     "ralu", 0b0110011, 0x2, 0x00},
+        {"sltu",    "ralu", 0b0110011, 0x3, 0x00},
         //alu immediate
-        {"addi",    "i", 0b0010011, 0x0, 0x00},
-        {"xori",    "i", 0b0010011, 0x4, 0x00},
-        {"ori",     "i", 0b0010011, 0x6, 0x00},
-        {"andi",    "i", 0b0010011, 0x7, 0x00},
-        {"slli",    "i", 0b0010011, 0x1, 0x00},
-        {"srli",    "i", 0b0010011, 0x5, 0x00},
-        {"srai",    "i", 0b0010011, 0x5, 0x20},
-        {"slti",    "i", 0b0010011, 0x2, 0x00},
-        {"sltui",   "i", 0b0010011, 0x3, 0x00},
+        {"addi",    "ialu", 0b0010011, 0x0, 0x00},
+        {"xori",    "ialu", 0b0010011, 0x4, 0x00},
+        {"ori",     "ialu", 0b0010011, 0x6, 0x00},
+        {"andi",    "ialu", 0b0010011, 0x7, 0x00},
+        {"slli",    "ialu", 0b0010011, 0x1, 0x00},
+        {"srli",    "ialu", 0b0010011, 0x5, 0x00},
+        {"srai",    "ialu", 0b0010011, 0x5, 0x20},
+        {"slti",    "ialu", 0b0010011, 0x2, 0x00},
+        {"sltui",   "ialu", 0b0010011, 0x3, 0x00},
         //load
-        {"lb",      "i", 0b0000011, 0x0, 0x00},
-        {"lh",      "i", 0b0000011, 0x1, 0x00},
-        {"lw",      "i", 0b0000011, 0x2, 0x00},
-        {"lbu",     "i", 0b0000011, 0x4, 0x00},
-        {"lhu",     "i", 0b0000011, 0x5, 0x00},
+        {"lb",      "l", 0b0000011, 0x0, 0x00},
+        {"lh",      "l", 0b0000011, 0x1, 0x00},
+        {"lw",      "l", 0b0000011, 0x2, 0x00},
+        {"lbu",     "l", 0b0000011, 0x4, 0x00},
+        {"lhu",     "l", 0b0000011, 0x5, 0x00},
         //store
         {"sb",      "s", 0b0100011, 0x0, 0x00},
         {"sh",      "s", 0b0100011, 0x1, 0x00},
@@ -105,22 +107,35 @@ struct instruction {
         {"bgeu",    "b", 0b1100011, 0x7, 0x00},
         //jump
         {"jal",     "j", 0b1101111, 0x0, 0x00},
-        {"jalr",    "i", 0b1100111, 0x0, 0x00},
+        {"jalr",    "ij", 0b1100111, 0x0, 0x00},
         //upper
         {"lui",     "u", 0b0110111, 0x0, 0x00},
         {"auipc",   "u", 0b0010111, 0x0, 0x00},
         //sys stuff
-        {"ecall",   "i", 0b1110011, 0x0, 0x00},
-        {"ebreak",  "i", 0b1110011, 0x0, 0x01},
+        {"ecall",   "env", 0b1110011, 0x0, 0x00},
+        {"ebreak",  "env", 0b1110011, 0x0, 0x01},
         //m extension
-        {"mul",     "r", 0b0110011, 0x0, 0x01},
-        {"mulh",    "r", 0b0110011, 0x1, 0x01},
-        {"mulsu",   "r", 0b0110011, 0x2, 0x01},
-        {"mulu",    "r", 0b0110011, 0x3, 0x01},
-        {"div",     "r", 0b0110011, 0x4, 0x01},
-        {"rem",     "r", 0b0110011, 0x5, 0x01},
-        {"remu",    "r", 0b0110011, 0x6, 0x01},
+        {"mul",     "ralu", 0b0110011, 0x0, 0x01},
+        {"mulh",    "ralu", 0b0110011, 0x1, 0x01},
+        {"mulsu",   "ralu", 0b0110011, 0x2, 0x01},
+        {"mulu",    "ralu", 0b0110011, 0x3, 0x01},
+        {"div",     "ralu", 0b0110011, 0x4, 0x01},
+        {"rem",     "ralu", 0b0110011, 0x5, 0x01},
+        {"remu",    "ralu", 0b0110011, 0x6, 0x01},
     };
+
+    std::string intToString(int bin) {
+        std::cout << std::hex << bin << std::endl;
+        std::string str = "";
+        for (int i = 0; i < 4; ++i) {
+            int masked = (bin >> (i * 8)) & 0xff;
+            std::stringstream stream;
+            stream << std::hex << masked;
+            str += stream.str() + " ";
+        }
+
+        return str;
+    }
 }
 
 #endif //INSTRUCTIONUTILS_H

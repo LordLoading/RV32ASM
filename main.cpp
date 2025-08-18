@@ -7,6 +7,9 @@
 
 #include "src/utils.h"
 #include "src/LabelSection.h"
+#include "src/instructionParsers/iUtils.h"
+#include "src/instructionParsers/parseIALUType.h"
+#include "src/instructionParsers/parseRALUType.h"
 
 // the code from here...
 void printUsage(const char* progName) {
@@ -121,5 +124,6 @@ int main(int argc, char* argv[]) {
         }
     }
 
+    std::cout << parseRALUType(iUtils::instructions[1], "sub x1, x2, x3") << std::endl;
     return 0;
 }
