@@ -164,6 +164,22 @@ struct instruction {
 
         return 0;
     }
+
+    struct offset {
+        std::string data;
+        std::string reg;
+    };
+
+    offset parseOffset (std::string str) {
+        offset off;
+
+        str = utils::getFirstWord(str);
+
+        off.data = str.substr(0, str.find_first_of("("));
+        off.reg = str.substr(str.find_first_of("(") + 1, str.find_first_of(")") - str.find_first_of("(") - 1);
+
+        return off;
+    }
 }
 
 #endif //INSTRUCTIONUTILS_H
