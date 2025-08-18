@@ -6,6 +6,7 @@
 #define INSTRUCTIONUTILS_H
 
 #pragma once
+#include "../utils.h"
 
 namespace iUtils {
     std::vector<std::string> regs = {
@@ -135,6 +136,33 @@ struct instruction {
         }
 
         return str;
+    }
+
+    bool isInstruction(const std::string& str) {
+        bool found = false;
+        for (const iUtils::instruction& inst : iUtils::instructions) {
+            if (inst.name == utils::getFirstWord(str)) {
+                found = true;
+                break;
+            }
+        }
+
+        return found;
+    };
+
+    int getLineSize(std::string line) {
+        if (utils::getFirstWord(line) == ".byte") return 1;
+        if (utils::getFirstWord(line) == ".half") return 2;
+        if (utils::getFirstWord(line) == ".word") return 4;
+        if (utils::getFirstWord(line) == ".string") {
+            int firstChar = line.find_first_of("\"");
+            int secondChar = line.find("\"", firstChar + 1);
+            return secondChar - firstChar;
+        }
+
+        if (isInstruction(line)) return 4;
+
+        return 0;
     }
 }
 
