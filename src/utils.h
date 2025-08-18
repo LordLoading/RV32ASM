@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 
-#include "instructionParsers/instructionUtils.h"
+#include "instructionParsers/iUtils.h"
 
 namespace utils {
     std::string getFirstWord(std::string str) {
