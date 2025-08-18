@@ -2,8 +2,8 @@
 // Created by lor on 8/13/25.
 //
 
-#ifndef DATAPARSER_H
-#define DATAPARSER_H
+#ifndef DUTILS_H
+#define DUTILS_H
 
 #pragma once
 
@@ -15,7 +15,7 @@
 
 #include "LabelSection.h"
 
-namespace DataParser {
+namespace dUtils {
     int parseFloat(std::string numStr) {
         float num = std::stof(numStr);
         int num2;
@@ -34,8 +34,7 @@ namespace DataParser {
     }
 
     int parseDec(std::string numStr) {
-        std::string data = numStr.substr(2);
-        return std::stoi(data, nullptr, 10);
+        return std::stoi(numStr, nullptr, 10);
     }
 
     int parseLabel(std::string labelName, std::vector<LabelSection> labels) {
@@ -46,16 +45,16 @@ namespace DataParser {
     }
 
     int parseAuto(std::string numStr, std::vector<LabelSection> labels) {
-        if (std::regex_match(numStr, std::regex("[0-9]+")))         return parseDec(numStr);
-        if (std::regex_match(numStr, std::regex("[0-9]+.[0-9]+")))  return parseFloat(numStr);
-        if (std::regex_match(numStr, std::regex("0x[0-9a-fA-F]+"))) return parseHex(numStr);
-        if (std::regex_match(numStr, std::regex("0b[0-1]+")))       return parseBin(numStr);
-        if (std::regex_match(numStr, std::regex("[0-9a-zA-Z]+")))   return parseLabel(numStr, labels);
+        if (std::regex_match(numStr, std::regex("-?[0-9]+")))           return parseDec(numStr);
+        if (std::regex_match(numStr, std::regex("-?[0-9]+\\.[0-9]+")))    return parseFloat(numStr);
+        if (std::regex_match(numStr, std::regex("0x[0-9a-fA-F]+")))     return parseHex(numStr);
+        if (std::regex_match(numStr, std::regex("0b[0-1]+")))           return parseBin(numStr);
+        if (std::regex_match(numStr, std::regex("[0-9a-zA-Z]+")))       return parseLabel(numStr, labels);
         else throw std::invalid_argument("Invalid constant");
     }
 
     int parseAuto(std::string numStr) {
-        parseAuto(numStr, std::vector<LabelSection>());
+        return parseAuto(numStr, std::vector<LabelSection>());
     }
 } // DataParser
 

@@ -1,17 +1,62 @@
 //
-// Created by lor on 8/14/25.
+// Created by loading on 17.08.2025.
 //
 
-#ifndef UTILS_H
-#define UTILS_H
+#ifndef INSTRUCTIONUTILS_H
+#define INSTRUCTIONUTILS_H
 
-#pragma once
+namespace iUtils {
+    std::vector<std::string> regs = {
+        "zero",
+        "ra",
+        "sp",
+        "gp",
+        "tp",
+        "t0",
+        "t1",
+        "t2",
+        "s0",
+        "s1",
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s11",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+    };
 
-#include <string>
-#include <vector>
+    int parseReg(std::string str) {
+        if (str[0] == 'x') {
+            str.erase(0, 1);
+            int num  = atoi(str.c_str());
+            if (num < 0 || num > 31) throw std::invalid_argument("invalid register index");
+            else return num;
+        } else {
+            for (int i = 0; i < regs.size(); i++) {
+                if (regs[i] == str) return i;
+            }
+            throw std::invalid_argument("invalid register name");
+        }
+    }
 
-namespace Utils {
-    struct instruction {
+
+struct instruction {
         std::string name;
         std::string fmt;
         int opcode;
@@ -76,39 +121,6 @@ namespace Utils {
         {"rem",     "r", 0b0110011, 0x5, 0x01},
         {"remu",    "r", 0b0110011, 0x6, 0x01},
     };
-
-    std::string getFirstWord(std::string str) {
-        int start = str.find_first_not_of("\t ");
-        str = str.substr(start, str.size());
-        return str.substr(0, str.find_first_of("\t "));
-    }
-
-    bool isInstruction(const std::string& str) {
-        bool found = false;
-        for (const instruction& inst : instructions) {
-            if (inst.name == getFirstWord(str)) {
-                found = true;
-                break;
-            }
-        }
-
-        return found;
-    };
-
-    int getLineSize(std::string line) {
-        if (getFirstWord(line) == ".byte") return 1;
-        if (getFirstWord(line) == ".half") return 2;
-        if (getFirstWord(line) == ".word") return 4;
-        if (getFirstWord(line) == ".string") {
-            int firstChar = line.find_first_of("\"");
-            int secondChar = line.find("\"", firstChar + 1);
-            return secondChar - firstChar;
-        }
-
-        if (isInstruction(line)) return 4;
-
-        return 0;
-    }
 }
 
-#endif //UTILS_H
+#endif //INSTRUCTIONUTILS_H

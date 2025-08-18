@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 
-#include "Utils.h"
+#include "utils.h"
 
 class LabelSection {
     public:
@@ -27,7 +27,7 @@ class LabelSection {
 
         int calculateSize() {
             for (const auto& currentLine : this->lines) {
-                this->dataSize += Utils::getLineSize(currentLine);
+                this->dataSize += utils::getLineSize(currentLine);
             }
 
             return this->dataSize;
@@ -36,7 +36,7 @@ class LabelSection {
         bool isText() {
             bool found = false;
             for (const std::string& currentLine : this->lines) {
-                if (Utils::isInstruction(currentLine)) {
+                if (utils::isInstruction(currentLine)) {
                     found = true;
                 }
             }
