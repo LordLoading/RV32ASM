@@ -9,4 +9,5 @@ add_executable(RV32ASM main.cpp
         src/utils.h
         src/instructionParsers/parseIALUType.h
         src/instructionParsers/iUtils.h
+        src/instructionParsers/parseLType.h
 )
