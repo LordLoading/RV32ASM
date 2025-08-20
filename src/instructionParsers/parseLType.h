@@ -11,8 +11,9 @@
 
 #include "iUtils.h"
 #include "../dUtils.h"
+#include "../lookup/reg.h"
 
-std::string parseLType(iUtils::instruction inst, std::string str) {
+std::string parseLType(inst::structThing inst, std::string str) {
     str.erase(0, str.find(" "));
 
     int bin = 0;
@@ -26,10 +27,10 @@ std::string parseLType(iUtils::instruction inst, std::string str) {
     }
 
     bin |= 0x7f & inst.opcode;
-    bin |= (0x1f & iUtils::parseReg(tokens[0])) << 7;
+    bin |= (0x1f & regs::parse(tokens[0])) << 7;
     bin |= (0x7 & inst.funct3) << (12);
     iUtils::offset offset = iUtils::parseOffset(tokens[1]);
-    bin |= (0x1f & iUtils::parseReg(offset.reg)) << (15);
+    bin |= (0x1f & regs::parse(offset.reg)) << (15);
     bin |= (0xfff & dUtils::parseAuto(offset.data)) << (20);
 
     return iUtils::intToString(bin);

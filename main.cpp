@@ -8,9 +8,7 @@
 #include "src/utils.h"
 #include "src/LabelSection.h"
 #include "src/instructionParsers/iUtils.h"
-#include "src/instructionParsers/parseIALUType.h"
 #include "src/instructionParsers/parseLType.h"
-#include "src/instructionParsers/parseRALUType.h"
 
 // the code from here...
 void printUsage(const char* progName) {
@@ -125,6 +123,6 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    std::cout << parseLType(iUtils::instructions[19], "lw x1, -2047(x1)") << std::endl;
+    std::cout << parseLType(inst::lookup[19], "lw x1, -2047(x1)") << std::endl;
     return 0;
 }
