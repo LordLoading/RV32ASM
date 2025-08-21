@@ -62,7 +62,7 @@ namespace iUtils {
         std::string reg;
     };
 
-    offset parseOffset (std::string str) {
+    offset splitOffset (std::string str) {
         offset off;
 
         str = utils::getFirstWord(str);

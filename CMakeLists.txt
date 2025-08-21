@@ -11,4 +11,5 @@ add_executable(RV32ASM main.cpp
         src/instructionParsers/iUtils.h
         src/instructionParsers/parseLType.h
         src/instructionParsers/assembleLine.h
+        src/instructionParsers/parseSType.h
 )

@@ -51,7 +51,7 @@ namespace regs {
             for (int i = 0; i < lookup.size(); i++) {
                 if (lookup[i] == str) return i;
             }
-            throw std::invalid_argument("invalid register name");
+            throw std::invalid_argument(std::format("invalid register name: {}", str));
         }
     }
 }

@@ -11,6 +11,7 @@
 #include "parseIALUType.h"
 #include "parseLType.h"
 #include "parseRALUType.h"
+#include "parseSType.h"
 #include "../utils.h"
 #include "../lookup/inst.h"
 
@@ -27,6 +28,7 @@ std::string assembleLine(std::string line, std::vector<LabelSection> labels) {
     if (inst.fmt == "ralu") return parseRALUType(inst, line);
     else if (inst.fmt == "ialu") return parseIALUType(inst, line, labels);
     else if (inst.fmt == "l") return parseLType(inst, line, labels);
+    else if (inst.fmt == "s") return parseSType(inst, line, labels);
     else {
         if (utils::getFirstWord(line) == ".word") {
             line.erase(0, line.find(' '));
