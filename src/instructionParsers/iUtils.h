@@ -18,7 +18,9 @@ namespace iUtils {
             int masked = (bin >> (i * 8)) & 0xff;
             std::stringstream stream;
             stream << std::hex << masked;
-            str += stream.str() + " ";
+            std::string byte = stream.str();
+            while (byte.size() < 2) byte = "0" + byte;
+            str += byte + " ";
         }
 
         return str;
