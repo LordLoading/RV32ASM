@@ -25,8 +25,8 @@ std::string assembleLine(std::string line, std::vector<LabelSection> labels) {
 
 
     if (inst.fmt == "ralu") return parseRALUType(inst, line);
-    else if (inst.fmt == "ialu") return parseIALUType(inst, line);
-    else if (inst.fmt == "l") return parseLType(inst, line);
+    else if (inst.fmt == "ialu") return parseIALUType(inst, line, labels);
+    else if (inst.fmt == "l") return parseLType(inst, line, labels);
     else {
         if (utils::getFirstWord(line) == ".word") {
             line.erase(0, line.find(' '));

@@ -124,6 +124,6 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    std::cout << assembleLine(".byte 0x34", sortedLabels) << std::endl;
+    std::cout << assembleLine("lw x1, main(x0)", sortedLabels) << std::endl;
     return 0;
 }

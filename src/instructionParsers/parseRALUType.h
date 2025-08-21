@@ -12,7 +12,7 @@
 #include "../lookup/reg.h"
 
 std::string parseRALUType(inst::structThing inst, std::string str) {
-    str.erase(0, str.find(" "));
+    str.erase(0, str.find(' '));
 
     int bin = 0;
 
