@@ -9,6 +9,7 @@
 #include "src/LabelSection.h"
 #include "src/instructionParsers/iUtils.h"
 #include "src/instructionParsers/parseLType.h"
+#include "src/instructionParsers/assembleLine.h"
 
 // the code from here...
 void printUsage(const char* progName) {
@@ -123,6 +124,6 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    std::cout << parseLType(inst::lookup[19], "lw x1, -2047(x1)") << std::endl;
+    std::cout << assembleLine("lw x1, -2047(x1)", sortedLabels) << std::endl;
     return 0;
 }
