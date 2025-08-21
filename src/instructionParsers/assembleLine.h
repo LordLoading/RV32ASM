@@ -28,8 +28,21 @@ std::string assembleLine(std::string line, std::vector<LabelSection> labels) {
     else if (inst.fmt == "ialu") return parseIALUType(inst, line);
     else if (inst.fmt == "l") return parseLType(inst, line);
     else {
-        int val = dUtils::parseAuto(line, labels);
-        return iUtils::intToString(val);
+        if (utils::getFirstWord(line) == ".word") {
+            line.erase(0, line.find(' '));
+            int val = dUtils::parseAuto(line, labels);
+            return iUtils::intToString(val, 4);
+        } else if (utils::getFirstWord(line) == ".half") {
+            line.erase(0, line.find(' '));
+            int val = dUtils::parseAuto(line, labels);
+            return iUtils::intToString(val, 2);
+        } else if (utils::getFirstWord(line) == ".byte") {
+            line.erase(0, line.find(' '));
+            int val = dUtils::parseAuto(line, labels);
+            return iUtils::intToString(val, 1);
+        } else if (utils::getFirstWord(line) == ".string") {
+            return "im slowly losing my sanity";
+        }
     }
 }
 

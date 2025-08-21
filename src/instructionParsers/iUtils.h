@@ -11,10 +11,10 @@
 
 
 namespace iUtils {
-    std::string intToString(int bin) {
+    std::string intToString(int bin, int bytes) {
         std::cout << std::hex << bin << std::endl;
         std::string str = "";
-        for (int i = 0; i < 4; ++i) {
+        for (int i = 0; i < bytes; ++i) {
             int masked = (bin >> (i * 8)) & 0xff;
             std::stringstream stream;
             stream << std::hex << masked;
@@ -22,6 +22,10 @@ namespace iUtils {
         }
 
         return str;
+    }
+
+    std::string intToString(int bin) {
+        return intToString(bin, 4);
     }
 
     bool isInstruction(const std::string& str) {
@@ -68,4 +72,4 @@ namespace iUtils {
     }
 }
 
-#endif //INSTRUCTIONUTILS_H
+#endif
