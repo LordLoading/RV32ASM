@@ -15,4 +15,5 @@ add_executable(RV32ASM main.cpp
         src/instructionStuff/parse/parseBType.h
         src/instructionStuff/parse/parseJType.h
         src/instructionStuff/parse/parseUType.h
+        src/instructionStuff/parse/parseEnvType.h
 )

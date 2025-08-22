@@ -75,4 +75,4 @@ namespace inst {
     };
 }
 
-#endif //INST_H
+#endif
