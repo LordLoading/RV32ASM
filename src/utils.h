@@ -17,4 +17,4 @@ namespace utils {
     }
 }
 
-#endif //UTILS_H
+#endif
