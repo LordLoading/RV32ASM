@@ -8,10 +8,10 @@
 #include <string>
 #include <vector>
 
-#include "../lookup/reg.h"
-#include "../utils.h"
-#include "../dUtils.h"
-#include "iUtils.h"
+#include "../../lookup/reg.h"
+#include "../../utils.h"
+#include "../../dUtils.h"
+#include "../iUtils.h"
 
 class LabelSection;
 

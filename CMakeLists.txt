@@ -7,9 +7,10 @@ add_executable(RV32ASM main.cpp
         src/dUtils.h
         src/LabelSection.h
         src/utils.h
-        src/instructionParsers/parseIALUType.h
-        src/instructionParsers/iUtils.h
-        src/instructionParsers/parseLType.h
-        src/instructionParsers/assembleLine.h
-        src/instructionParsers/parseSType.h
+        src/instructionStuff/parse/parseIALUType.h
+        src/instructionStuff/iUtils.h
+        src/instructionStuff/parse/parseLType.h
+        src/instructionStuff/assembleLine.h
+        src/instructionStuff/parse/parseSType.h
+        src/instructionStuff/parse/parseBType.h
 )

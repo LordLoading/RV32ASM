@@ -6,7 +6,7 @@
 #include <regex>
 
 #include "src/LabelSection.h"
-#include "src/instructionParsers/assembleLine.h"
+#include "src/instructionStuff/assembleLine.h"
 
 // the code from here...
 void printUsage(const char* progName) {
@@ -121,6 +121,6 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    std::cout << assembleLine("sb x1, word2(x0)", sortedLabels) << std::endl;
+    std::cout << assembleLine("beq x1, x2, -2046", sortedLabels) << std::endl;
     return 0;
 }

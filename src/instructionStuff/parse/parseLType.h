@@ -10,9 +10,9 @@
 #include <utility>
 #include <vector>
 
-#include "iUtils.h"
-#include "../dUtils.h"
-#include "../lookup/reg.h"
+#include "../iUtils.h"
+#include "../../dUtils.h"
+#include "../../lookup/reg.h"
 
 std::string parseLType(inst::structThing inst, std::string str, std::vector<LabelSection> labels) {
     str.erase(0, str.find(' '));

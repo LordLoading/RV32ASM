@@ -8,10 +8,12 @@
 
 #include <string>
 
-#include "parseIALUType.h"
-#include "parseLType.h"
-#include "parseRALUType.h"
-#include "parseSType.h"
+#include "parse/parseIALUType.h"
+#include "parse/parseBType.h"
+#include "parse/parseRALUType.h"
+#include "parse/parseSType.h"
+#include "parse/parseLType.h"
+
 #include "../utils.h"
 #include "../lookup/inst.h"
 
@@ -29,6 +31,7 @@ std::string assembleLine(std::string line, std::vector<LabelSection> labels) {
     else if (inst.fmt == "ialu") return parseIALUType(inst, line, labels);
     else if (inst.fmt == "l") return parseLType(inst, line, labels);
     else if (inst.fmt == "s") return parseSType(inst, line, labels);
+    else if (inst.fmt == "b") return parseBType(inst, line);
     else {
         if (utils::getFirstWord(line) == ".word") {
             line.erase(0, line.find(' '));
