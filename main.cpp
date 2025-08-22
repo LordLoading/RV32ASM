@@ -121,6 +121,6 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    std::cout << assembleLine("jal x3, -1048574", sortedLabels) << std::endl;
+    std::cout << assembleLine("lui x3, -520063", sortedLabels) << std::endl;
     return 0;
 }

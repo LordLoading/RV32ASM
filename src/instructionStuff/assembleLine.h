@@ -17,6 +17,7 @@
 #include "../utils.h"
 #include "../lookup/inst.h"
 #include "parse/parseJType.h"
+#include "parse/parseUType.h"
 
 std::string assembleLine(std::string line, std::vector<LabelSection> labels) {
     inst::structThing inst;
@@ -34,6 +35,7 @@ std::string assembleLine(std::string line, std::vector<LabelSection> labels) {
     else if (inst.fmt == "s") return parseSType(inst, line, labels);
     else if (inst.fmt == "b") return parseBType(inst, line);
     else if (inst.fmt == "j") return parseJType(inst, line);
+    else if (inst.fmt == "u") return parseUType(inst, line);
     else {
         if (utils::getFirstWord(line) == ".word") {
             line.erase(0, line.find(' '));
