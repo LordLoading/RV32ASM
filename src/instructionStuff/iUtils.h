@@ -12,7 +12,6 @@
 
 namespace iUtils {
     std::string intToString(int bin, int bytes) {
-        std::cout << std::hex << bin << std::endl;
         std::string str = "";
         for (int i = 0; i < bytes; ++i) {
             int masked = (bin >> (i * 8)) & 0xff;

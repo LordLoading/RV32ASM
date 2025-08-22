@@ -42,7 +42,7 @@ namespace dUtils {
         for (LabelSection label : labels) {
             if (label.name == labelName) return label.address;
         }
-        throw std::invalid_argument("Invalid label name");
+        throw std::invalid_argument(std::format("Invalid label name: {}", labelName));
     }
 
     int parseAuto(std::string numStr, std::vector<LabelSection> labels) {

@@ -16,6 +16,7 @@
 #include "../../utils.h"
 
 std::string parseUType(inst::structThing inst, std::string str) {
+    str.erase(0 ,str.find_first_not_of("   "));
     str.erase(0, str.find(' '));
 
     int bin = 0;

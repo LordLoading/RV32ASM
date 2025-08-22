@@ -16,6 +16,7 @@
 #include "../../utils.h"
 
 std::string parseJType(inst::structThing inst, std::string str) {
+    str.erase(0 ,str.find_first_not_of("   "));
     str.erase(0, str.find(' '));
 
     int bin = 0;
@@ -40,4 +41,4 @@ std::string parseJType(inst::structThing inst, std::string str) {
     return iUtils::intToString(bin);
 }
 
-#endif //PARSEJTYPE_H
+#endif

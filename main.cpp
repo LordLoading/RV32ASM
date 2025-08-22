@@ -121,6 +121,15 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    std::cout << assembleLine("lui x3, -520063", sortedLabels) << std::endl;
+    std::string data = "";
+
+    for (LabelSection label : sortedLabels) {
+        for (std::string line : label.lines) {
+            data += assembleLine(line, sortedLabels);
+        }
+    }
+
+    std::cout << data << std::endl;
+
     return 0;
 }

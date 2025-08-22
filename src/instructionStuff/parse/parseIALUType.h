@@ -14,6 +14,7 @@
 #include "../../lookup/reg.h"
 
 std::string parseIALUType(inst::structThing inst, std::string str, std::vector<LabelSection> labels) {
+    str.erase(0 ,str.find_first_not_of("   "));
     str.erase(0, str.find(' '));
 
     int bin = 0;

@@ -12,6 +12,7 @@
 #include "../../lookup/reg.h"
 
 std::string parseRALUType(inst::structThing inst, std::string str) {
+    str.erase(0 ,str.find_first_not_of("   "));
     str.erase(0, str.find(' '));
 
     int bin = 0;
@@ -25,7 +26,6 @@ std::string parseRALUType(inst::structThing inst, std::string str) {
     }
 
     bin |= (0x7f & inst.opcode);
-    std::cout << std::hex << inst.opcode << std::endl;
     bin |= (0x1f & regs::parse(tokens[0])) << 7;
     bin |= (0x7 & inst.funct3) << (12);
     bin |= (0x1f & regs::parse(tokens[1])) << (15);

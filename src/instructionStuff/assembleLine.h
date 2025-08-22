@@ -29,6 +29,7 @@ std::string assembleLine(std::string line, std::vector<LabelSection> labels) {
         }
     }
 
+    std::string fw = utils::getFirstWord(line);
 
     if (inst.fmt == "ralu") return parseRALUType(inst, line);
     else if (inst.fmt == "ialu") return parseIALUType(inst, line, labels);
@@ -39,19 +40,21 @@ std::string assembleLine(std::string line, std::vector<LabelSection> labels) {
     else if (inst.fmt == "u") return parseUType(inst, line);
     else if (inst.fmt == "env") return parseEnvType(inst);
     else {
-        if (utils::getFirstWord(line) == ".word") {
+        line.erase(0 ,line.find_first_not_of("   "));
+        line.erase(0, line.find(' '));
+        if (fw == ".word") {
             line.erase(0, line.find(' '));
             int val = dUtils::parseAuto(line, labels);
             return iUtils::intToString(val, 4);
-        } else if (utils::getFirstWord(line) == ".half") {
+        } else if (fw == ".half") {
             line.erase(0, line.find(' '));
             int val = dUtils::parseAuto(line, labels);
             return iUtils::intToString(val, 2);
-        } else if (utils::getFirstWord(line) == ".byte") {
+        } else if (fw == ".byte") {
             line.erase(0, line.find(' '));
             int val = dUtils::parseAuto(line, labels);
             return iUtils::intToString(val, 1);
-        } else if (utils::getFirstWord(line) == ".string") {
+        } else if (fw == ".string") {
             return "im slowly losing my sanity";
         }
     }
