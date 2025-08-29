@@ -13,7 +13,7 @@ half:
 
 routine:
     addi x2, x0, 0x12
-    jal x0, main
+    jalr x0, main(x0)
 
 main:
     lw x1, word(x0)
@@ -25,3 +25,5 @@ main:
 
 balls:
     .byte 0xab
+word:
+    .word 0xba115
