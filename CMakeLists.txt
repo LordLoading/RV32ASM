@@ -21,4 +21,5 @@ add_executable(RV32ASM main.cpp
         src/instructionStuff/assembleInst.h
         src/instructionStuff/assemblePseudo.h
         src/instructionStuff/parse/pseudo/parseMv.h
+        src/instructionStuff/parse/pseudo/parseNot.h
 )
