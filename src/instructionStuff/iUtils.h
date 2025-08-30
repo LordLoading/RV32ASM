@@ -11,6 +11,21 @@
 
 
 namespace iUtils {
+    std::vector<std::string> getParamsFromLine(std::string line) {
+        line.erase(0 ,line.find_first_not_of("   "));
+        line.erase(0, line.find(' '));
+
+        std::stringstream strStream(line);
+        std::string intermediate;
+        std::vector<std::string> tokens;
+
+        while (std::getline(strStream, intermediate, ',')) {
+            tokens.push_back(utils::getFirstWord(intermediate));
+        }
+
+        return tokens;
+    }
+
     std::string intToString(int bin, int bytes) {
         std::string str = "";
         for (int i = 0; i < bytes; ++i) {

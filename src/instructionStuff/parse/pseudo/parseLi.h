@@ -4,25 +4,28 @@
 
 #ifndef PARSELI_H
 #define PARSELI_H
+#include <format>
 #include <string>
 #include <vector>
 
-std::string parseLi(std::string str) {
-    str.erase(0 ,str.find_first_not_of("   "));
-    str.erase(0, str.find(' '));
+#include "../../../dUtils.h"
+#include "iUtils.h"
+#include "../../assembleInst.h"
 
-    int bin = 0;
+std::string parseLi(std::string str, std::vector<LabelSection> labels) {
+    std::vector<std::string> tokens = iUtils::getParamsFromLine(str);
 
-    std::stringstream strStream(str);
-    std::string intermediate;
-    std::vector<std::string> tokens;
+    const int num = dUtils::parseAuto(tokens[1], labels);
 
-    while (std::getline(strStream, intermediate, ',')) {
-        tokens.push_back(utils::getFirstWord(intermediate));
-    }
+    const int lower = num & 0x0fff;
+    int upper = (num >> 12) & 0x0fffff;
 
-    std::string lowerInst = "";
-    std::string upperInst = "lui";
+    if ((lower >> 11) == 1) upper++;
+
+    std::string lowerInst = std::format("addi ", tokens[0], ", x0, ", lower);
+    std::string upperInst = std::format("lui ", tokens[0], ", ", upper);
+
+    return assembleInst(upperInst, labels) + assembleInst(lowerInst, labels);
 };
 
 #endif //PARSELI_H
