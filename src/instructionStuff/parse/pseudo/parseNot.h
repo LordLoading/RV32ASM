@@ -9,9 +9,6 @@
 
 #include "../../assembleInst.h"
 
-
-class LabelSection;
-
 std::string parseNot(std::string line, std::vector<LabelSection> labels) {
     std::vector<std::string> tokens = iUtils::getParamsFromLine(line);
 

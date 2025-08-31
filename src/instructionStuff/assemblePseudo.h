@@ -10,6 +10,7 @@
 #include "../LabelSection.h"
 #include "parse/pseudo/parseLi.h"
 #include "parse/pseudo/parseMv.h"
+#include "parse/pseudo/parseNeg.h"
 #include "parse/pseudo/parseNot.h"
 
 std::string assemblePseudo(std::string line, std::vector<LabelSection> labels) {
@@ -18,6 +19,7 @@ std::string assemblePseudo(std::string line, std::vector<LabelSection> labels) {
     if (fw == "li") return parseLi(line, labels);
     else if (fw == "mv") return parseMv(line, labels);
     else if (fw == "not") return parseNot(line, labels);
+    else if (fw == "neg") return parseNeg(line, labels);
 }
 
 #endif //ASSEMBLEPSEUDO_H
