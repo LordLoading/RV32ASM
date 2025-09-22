@@ -1,17 +1,15 @@
 //
-// Created by lor on 8/26/25.
+// Created by lor on 9/3/25.
 //
 
-#ifndef PARSELI_H
-#define PARSELI_H
-#include <format>
+#ifndef PARSECALL_H
+#define PARSECALL_H
 #include <string>
 #include <vector>
 
-#include "../../../dUtils.h"
 #include "../../assembleInst.h"
 
-std::string parseLi(std::string str, std::vector<LabelSection> labels) {
+std::string parseCall(std::string str, std::vector<LabelSection> labels) {
     std::vector<std::string> tokens = iUtils::getParamsFromLine(str);
 
     const int num = dUtils::parseAuto(tokens[1], labels);
@@ -27,4 +25,4 @@ std::string parseLi(std::string str, std::vector<LabelSection> labels) {
     return assembleInst(upperInst, labels) + assembleInst(lowerInst, labels);
 };
 
-#endif //PARSELI_H
+#endif //PARSECALL_H

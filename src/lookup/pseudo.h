@@ -15,7 +15,13 @@ namespace pseudo {
     };
 
     std::vector<structThing> lookup = {
-        {"li", 8}
+        {"li", 8},
+        {"j", 4},
+        {"mv", 4},
+        {"not", 4},
+        {"neg", 4},
+        {"jr", 4},
+        {"nop", 4}
     };
 }
 
