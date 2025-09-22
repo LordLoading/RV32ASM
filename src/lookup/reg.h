@@ -4,6 +4,7 @@
 
 #ifndef REG_H
 #define REG_H
+#include <format>
 
 namespace regs {
     std::vector<std::string> lookup = {

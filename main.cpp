@@ -9,16 +9,30 @@
 #include "src/instructionStuff/assembleLine.h"
 
 // the code from here...
-void printUsage(const char* progName) {
-    std::cout << "Usage: " << progName << " [options]\n\n"
-              << "Options:\n"
-              << "  -i, --input <file>    Input assembly file (default: assembleMe.s)\n"
-              << "  -o, --output <file>   Output Logisim v3 hex file (default: program_v3.hex)\n"
-              << "  -h, --help            Show this help message\n";
+void exportLogisimV3_0(const std::string &bytes, const std::string &outFilename) {
+    std::ofstream outFile(outFilename);
+    if (!outFile) {
+        throw std::ios_base::failure(
+            "Failed to open output file '" + outFilename + "'.");
+    }
+
+    outFile << "v3.0 hex words plain\n";
+    for (const uint8_t &byte: bytes) {
+        outFile << byte;
+    }
+    outFile << "\n";
 }
 
-int main(int argc, char* argv[]) {
-    std::string inputFile  = "assembleMe.s";
+void printUsage(const char *progName) {
+    std::cout << "Usage: " << progName << " [options]\n\n"
+            << "Options:\n"
+            << "  -i, --input <file>    Input assembly file (default: assembleMe.s)\n"
+            << "  -o, --output <file>   Output Logisim v3 hex file (default: program_v3.hex)\n"
+            << "  -h, --help            Show this help message\n";
+}
+
+int main(int argc, char *argv[]) {
+    std::string inputFile = "assembleMe.s";
     std::string outputFile = "program_v3.hex";
 
     for (int i = 1; i < argc; ++i) {
@@ -29,20 +43,17 @@ int main(int argc, char* argv[]) {
                 std::cerr << arg << " requires a filename argument\n";
                 return 1;
             }
-        }
-        else if (arg == "-o" || arg == "--output") {
+        } else if (arg == "-o" || arg == "--output") {
             if (i + 1 < argc) {
                 outputFile = argv[++i];
             } else {
                 std::cerr << arg << " requires a filename argument\n";
                 return 1;
             }
-        }
-        else if (arg == "-h" || arg == "--help") {
+        } else if (arg == "-h" || arg == "--help") {
             printUsage(argv[0]);
             return 0;
-        }
-        else {
+        } else {
             std::cerr << "Unknown option: " << arg << "\n";
             printUsage(argv[0]);
             return 1;
@@ -66,7 +77,7 @@ int main(int argc, char* argv[]) {
     std::vector<LabelSection> labels;
 
     // create label sections
-    for (std::string currentLine : lines) {
+    for (std::string currentLine: lines) {
         if (std::regex_match(currentLine, std::regex(".*:"))) {
             if (currentLabel.name != "") {
                 labels.push_back(currentLabel);
@@ -107,7 +118,7 @@ int main(int argc, char* argv[]) {
         }
     }
     // push the rest after (only data left so no need to keep sorting)
-    for (LabelSection currentLabel : labels) {
+    for (LabelSection currentLabel: labels) {
         sortedLabels.push_back(currentLabel);
     }
 
@@ -123,13 +134,14 @@ int main(int argc, char* argv[]) {
 
     std::string data = "";
 
-    for (LabelSection label : sortedLabels) {
-        for (std::string line : label.lines) {
+    for (LabelSection label: sortedLabels) {
+        for (std::string line: label.lines) {
             data += assembleLine(line, sortedLabels);
         }
     }
 
     std::cout << data << std::endl;
+    //exportLogisimV3_0(data, outputFile);
 
     return 0;
 }
