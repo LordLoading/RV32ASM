@@ -21,7 +21,8 @@ namespace pseudo {
         {"not", 4},
         {"neg", 4},
         {"jr", 4},
-        {"nop", 4}
+        {"nop", 4},
+        {"ret", 4}
     };
 }
 

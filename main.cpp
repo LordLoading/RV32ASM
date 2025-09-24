@@ -141,7 +141,7 @@ int main(int argc, char *argv[]) {
     }
 
     std::cout << data << std::endl;
-    //exportLogisimV3_0(data, outputFile);
+    exportLogisimV3_0(data, outputFile);
 
     return 0;
 }
