@@ -48,6 +48,8 @@ std::string assembleLine(std::string line, std::vector<LabelSection> labels) {
             return iUtils::intToString(val, 1);
         } else if (fw == ".string") {
             return "im slowly losing my sanity";
+        } else {
+            throw std::invalid_argument(std::format("Invalid instruction: {}", fw));
         }
     }
 }

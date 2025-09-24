@@ -20,6 +20,7 @@ std::string assemblePseudo(std::string line, std::vector<LabelSection> labels) {
     else if (fw == "mv") return parseMv(line, labels);
     else if (fw == "not") return parseNot(line, labels);
     else if (fw == "neg") return parseNeg(line, labels);
+    else return "";
 }
 
 #endif //ASSEMBLEPSEUDO_H

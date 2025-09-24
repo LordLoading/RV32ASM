@@ -7,7 +7,6 @@
 
 #pragma once
 
-#include <bitset>
 #include <cstring>
 #include <format>
 #include <regex>
