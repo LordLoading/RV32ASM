@@ -12,6 +12,6 @@
 class LabelSection;
 
 std::string parseRet(std::string str, std::vector<LabelSection> labels) {
-   return assembleInst("jalr x0, ra, 0", labels);
+   return assembleInst("jalr x0, 0(ra)", labels);
 }
 #endif //PARSERET_H

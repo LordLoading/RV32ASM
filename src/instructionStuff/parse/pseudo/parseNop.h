@@ -10,7 +10,7 @@
 #include "../../../LabelSection.h"
 
 std::string parseNop(std::string str, std::vector<LabelSection> labels) {
-    return assembleInst("addi x0, x0, 0");
+    return assembleInst("addi x0, x0, 0", labels);
 }
 
 #endif //PARSENOP_H

@@ -57,13 +57,18 @@ namespace iUtils {
     };
 
     int getLineSize(std::string line) {
-        if (utils::getFirstWord(line) == ".byte") return 1;
-        if (utils::getFirstWord(line) == ".half") return 2;
-        if (utils::getFirstWord(line) == ".word") return 4;
+        int elemSize = 0;
+        if (utils::getFirstWord(line) == ".byte") elemSize = 1;
+        if (utils::getFirstWord(line) == ".half") elemSize = 2;
+        if (utils::getFirstWord(line) == ".word") elemSize = 4;
         if (utils::getFirstWord(line) == ".string") {
             int firstChar = line.find_first_of("\"");
             int secondChar = line.find("\"", firstChar + 1);
-            return secondChar - firstChar;
+            return secondChar - firstChar + 1;
+        }
+
+        if (elemSize != 0) {
+            return elemSize * getParamsFromLine(line).size();
         }
 
         if (isInstruction(line)) return 4;
