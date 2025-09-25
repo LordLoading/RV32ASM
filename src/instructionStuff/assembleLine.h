@@ -47,7 +47,14 @@ std::string assembleLine(std::string line, std::vector<LabelSection> labels) {
             int val = dUtils::parseAuto(line, labels);
             return iUtils::intToString(val, 1);
         } else if (fw == ".string") {
-            return "im slowly losing my sanity";
+            line.erase(0, line.find('"') + 1);
+            line.erase(line.find_last_of('"'), line.size());
+            std::string bytes = "";
+            for (char c: line) {
+                bytes += iUtils::intToString(c, 1);
+            }
+            bytes += "00 ";
+            return bytes;
         } else {
             throw std::invalid_argument(std::format("Invalid instruction: {}", fw));
         }
