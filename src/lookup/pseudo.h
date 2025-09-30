@@ -12,6 +12,7 @@ namespace pseudo {
     struct structThing {
         std::string name;
         int length;
+
     };
 
     std::vector<structThing> lookup = {
@@ -22,7 +23,8 @@ namespace pseudo {
         {"neg", 4},
         {"jr", 4},
         {"nop", 4},
-        {"ret", 4}
+        {"ret", 4},
+        {"call", 12}
     };
 }
 
