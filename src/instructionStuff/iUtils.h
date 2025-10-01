@@ -8,6 +8,7 @@
 #pragma once
 #include "../utils.h"
 #include "../lookup/inst.h"
+#include "../lookup/pseudo.h"
 
 
 namespace iUtils {
@@ -56,6 +57,14 @@ namespace iUtils {
         return found;
     };
 
+    int getPseudoSize(std::string line) {
+        for (const pseudo::structThing& inst : pseudo::lookup) {
+            if (inst.name == utils::getFirstWord(line)) {
+                return inst.length;
+            }
+        }
+    }
+
     int getLineSize(std::string line) {
         int elemSize = 0;
         if (utils::getFirstWord(line) == ".byte") elemSize = 1;
@@ -72,6 +81,7 @@ namespace iUtils {
         }
 
         if (isInstruction(line)) return 4;
+        else return getPseudoSize(line);
 
         return 0;
     }

@@ -25,16 +25,25 @@ namespace dUtils {
 
     int parseBin(std::string numStr) {
         std::string data = numStr.substr(2);
-        return std::stoi(data, nullptr, 2);
+        long l = stol(data, nullptr, 2);
+        int i;
+        memcpy(&i, &l, sizeof(int));
+        return i;
     }
 
     int parseHex(std::string numStr) {
         std::string data = numStr.substr(2);
-        return std::stoi(data, nullptr, 16);
+        long l = stol(data, nullptr, 16);
+        int i;
+        memcpy(&i, &l, sizeof(int));
+        return i;
     }
 
     int parseDec(std::string numStr) {
-        return std::stoi(numStr, nullptr, 10);
+        long l = stol(numStr, nullptr, 10);
+        int i;
+        memcpy(&i, &l, sizeof(int));
+        return i;
     }
 
     int parseLabel(std::string labelName, std::vector<LabelSection> labels) {

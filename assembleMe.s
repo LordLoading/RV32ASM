@@ -1,29 +1,17 @@
-struct:
-    .word 0xc
-    .half 0xffff
-    .word 0xa
-word2:
-    .word 0xd0
-half:
-    .word 0xf0
-
-# test comment
-# test comment 2
-# test
-
-routine:
-    addi x2, x0, 0x12
-    jalr x0, main(x0)
-
 main:
-    lw x1, word(x0)
-    lw x3, word2(x0)
-    lh x4, half(x0)
+    call setup
+    call strLoop
 
-    addi x2, x1, 1
-    addi x4, x3, 1
+setup:
+    li t2, 0x20000
+    ret
 
-balls:
-    .byte 0xab
-word:
-    .word 0xba115
+strLoop:
+    lb t0, msg(t1)
+    addi t1, t1, 1
+    beq t0, x0, 0xffff
+    sb t2, 0(t2)
+    call strLoop
+
+msg:
+    .string "alerta alerta antifacista"
