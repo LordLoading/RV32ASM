@@ -73,7 +73,7 @@ namespace iUtils {
         if (utils::getFirstWord(line) == ".string") {
             int firstChar = line.find_first_of("\"");
             int secondChar = line.find("\"", firstChar + 1);
-            return secondChar - firstChar + 1;
+            return secondChar - firstChar;
         }
 
         if (elemSize != 0) {

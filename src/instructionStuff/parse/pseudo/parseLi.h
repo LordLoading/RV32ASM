@@ -19,10 +19,15 @@ std::string parseLi(std::string str, std::vector<LabelSection> labels) {
     const int lower = num & 0x0fff;
     int upper = (num >> 12) & 0x0fffff;
 
+    std::cout << tokens[1] << ": " << num;
+    std::cout << ", lower: " << lower;
+
     if ((lower >> 11) == 1) upper++;
 
     std::string upperInst = "lui " + tokens[0] + ", " + std::to_string(upper);
     std::string lowerInst = "addi " + tokens[0] + ", " + tokens[0] + ", " + std::to_string(lower);
+
+    std::cout << ", lowerInst: " << lowerInst << std::endl;
 
     return assembleInst(upperInst, labels) + assembleInst(lowerInst, labels);
 };

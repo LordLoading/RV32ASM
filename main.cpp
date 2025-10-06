@@ -129,6 +129,7 @@ int main(int argc, char *argv[]) {
         if (i > 0) {
             LabelSection prevLabel = sortedLabels[i - 1];
             sortedLabels[i].address = prevLabel.address + prevLabel.dataSize;
+            std::cout << sortedLabels[i].name << ": " << sortedLabels[i].address << "\n";
         }
     }
 
