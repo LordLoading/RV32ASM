@@ -12,7 +12,7 @@
 std::string parseNot(std::string line, std::vector<LabelSection> labels) {
     std::vector<std::string> tokens = iUtils::getParamsFromLine(line);
 
-    return assembleInst(std::format("xori ", tokens[0], ", ", tokens[1]), labels);
+    return assembleInst(std::format("xori ", tokens[0], ", ", tokens[1], ", -1"), labels);
 }
 
 #endif //PARSENOT_H
