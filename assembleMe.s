@@ -1,4 +1,5 @@
 main:
+    lb x1, 4(x0)
     call setup
     call strLoop
 
