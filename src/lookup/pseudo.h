@@ -24,7 +24,14 @@ namespace pseudo {
         {"jr", 4},
         {"nop", 4},
         {"ret", 4},
-        {"call", 12}
+        {"call", 12},
+        {"pushb", 8},
+        {"popb", 8},
+        {"pushh", 8},
+        {"poph", 8},
+        {"pushw", 8},
+        {"popw", 8},
+
     };
 }
 

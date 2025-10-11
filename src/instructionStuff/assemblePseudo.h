@@ -16,6 +16,12 @@
 #include "parse/pseudo/parseNeg.h"
 #include "parse/pseudo/parseNop.h"
 #include "parse/pseudo/parseNot.h"
+#include "parse/pseudo/parsePopB.h"
+#include "parse/pseudo/parsePopH.h"
+#include "parse/pseudo/parsePopW.h"
+#include "parse/pseudo/parsePushB.h"
+#include "parse/pseudo/parsePushH.h"
+#include "parse/pseudo/parsePushW.h"
 #include "parse/pseudo/parseRet.h"
 
 std::string assemblePseudo(std::string line, std::vector<LabelSection> labels) {
@@ -30,6 +36,12 @@ std::string assemblePseudo(std::string line, std::vector<LabelSection> labels) {
     else if (fw == "ret") return parseRet(line, labels);
     else if (fw == "j") return parseJ(line, labels);
     else if (fw == "jr") return parseJr(line, labels);
+    else if (fw == "pushb") return  parsePushB(line, labels);
+    else if (fw == "popb") return parsePopB(line, labels);
+    else if (fw == "pushh") return parsePushH(line, labels);
+    else if (fw == "poph") return parsePopH(line, labels);
+    else if (fw == "pushw") return parsePushW(line, labels);
+    else if (fw == "popW") return parsePopW(line, labels);
     else return "";
 }
 

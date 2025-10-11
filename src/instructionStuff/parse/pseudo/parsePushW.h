@@ -2,8 +2,8 @@
 // Created by lor on 10/7/25.
 //
 
-#ifndef PARSEPUSH_H
-#define PARSEPUSH_H
+#ifndef PARSEPUSH_W
+#define PARSEPUSH_W
 #include <string>
 #include <vector>
 
@@ -16,4 +16,4 @@ std::string parsePushW(std::string line, std::vector<LabelSection> labels) {
     std::string moveSp = "addi sp, sp, -4";
     return assembleLine(store, labels) + assembleLine(moveSp, labels);
 }
-#endif //PARSEPUSH_H
+#endif //PARSEPUSH_W
