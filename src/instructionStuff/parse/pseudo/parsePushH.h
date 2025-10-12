@@ -2,8 +2,8 @@
 // Created by lor on 10/7/25.
 //
 
-#ifndef PARSEPUSH_H
-#define PARSEPUSH_H
+#ifndef PARSEPUSHH_H
+#define PARSEPUSHH_H
 #include <string>
 #include <vector>
 
@@ -12,8 +12,8 @@
 
 std::string parsePushH(std::string line, std::vector<LabelSection> labels) {
     std::vector<std::string> tokens = iUtils::getParamsFromLine(line);
-    std::string store = std::format("sh ", tokens[0], ", 0(sp)");
+    std::string store = "sh " + tokens[0] + ", 0(sp)";
     std::string moveSp = "addi sp, sp, -2";
-    return assembleLine(store, labels) + assembleLine(moveSp, labels);
+    return assembleInst(store, labels) + assembleInst(moveSp, labels);
 }
-#endif //PARSEPUSH_H
+#endif //PARSEPUSHH_H

@@ -2,8 +2,8 @@
 // Created by lor on 10/7/25.
 //
 
-#ifndef PARSEPOP_B
-#define PARSEPOP_B
+#ifndef PARSEPOPB_H
+#define PARSEPOPB_H
 #include <string>
 #include <vector>
 
@@ -13,7 +13,7 @@
 std::string parsePopB(std::string line, std::vector<LabelSection> labels) {
     std::vector<std::string> tokens = iUtils::getParamsFromLine(line);
     std::string moveSp = "addi sp, sp, 1";
-    std::string store = std::format("sb ", tokens[0], ", 0(sp)");
-    return assembleLine(moveSp, labels) + assembleLine(store, labels);
+    std::string store = "sb " + tokens[0] + ", 0(sp)";
+    return assembleInst(moveSp, labels) + assembleInst(store, labels);
 }
-#endif //PARSEPOP_B
+#endif //PARSEPOPB_H

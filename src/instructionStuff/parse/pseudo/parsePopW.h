@@ -2,8 +2,8 @@
 // Created by lor on 10/7/25.
 //
 
-#ifndef PARSEPOP_W
-#define PARSEPOP_W
+#ifndef PARSEPOPW_H
+#define PARSEPOPW_H
 #include <string>
 #include <vector>
 
@@ -13,7 +13,7 @@
 std::string parsePopW(std::string line, std::vector<LabelSection> labels) {
     std::vector<std::string> tokens = iUtils::getParamsFromLine(line);
     std::string moveSp = "addi sp, sp, 4";
-    std::string store = std::format("sb ", tokens[0], ", 0(sp)");
-    return assembleLine(moveSp, labels) + assembleLine(store, labels);
+    std::string store = "sb " + tokens[0] + ", 0(sp)";
+    return assembleInst(moveSp, labels) + assembleInst(store, labels);
 }
-#endif //PARSEPOP_W
+#endif //PARSEPOPW_H
