@@ -31,6 +31,8 @@ namespace pseudo {
         {"poph", 8},
         {"pushw", 8},
         {"popw", 8},
+        {"pushframe", 12},
+        {"popframe", 12}
 
     };
 }

@@ -29,4 +29,5 @@ add_executable(RV32ASM main.cpp
         src/instructionStuff/parse/pseudo/parseNop.h
         src/instructionStuff/parse/pseudo/parseRet.h
         src/instructionStuff/parse/pseudo/parsePushW.h
+        src/instructionStuff/parse/pseudo/parsePopFrame.h
 )

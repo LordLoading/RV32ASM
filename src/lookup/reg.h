@@ -16,7 +16,7 @@ namespace regs {
         "t0",
         "t1",
         "t2",
-        "s0",
+        "fp",
         "s1",
         "a0",
         "a1",

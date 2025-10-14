@@ -13,7 +13,7 @@
 std::string parsePopW(std::string line, std::vector<LabelSection> labels) {
     std::vector<std::string> tokens = iUtils::getParamsFromLine(line);
     std::string moveSp = "addi sp, sp, 4";
-    std::string store = "sb " + tokens[0] + ", 0(sp)";
+    std::string store = "lw " + tokens[0] + ", 0(sp)";
     return assembleInst(moveSp, labels) + assembleInst(store, labels);
 }
 #endif //PARSEPOPW_H
