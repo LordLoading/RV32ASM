@@ -11,8 +11,6 @@
 #include "../../assembleLine.h"
 
 std::string parsePopFrame(std::string line, std::vector<LabelSection> labels) {
-    std::vector<std::string> tokens = iUtils::getParamsFromLine(line);
-
     std::string setsp = "mv fp, sp";
     std::string popFp = "popw fp";
     return parsePushW(pushFp, labels) + parseMv(setFp, labels);
