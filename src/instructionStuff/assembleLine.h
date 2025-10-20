@@ -9,7 +9,7 @@
 #include <string>
 
 #include "assembleInst.h"
-#include "assemblePseudo.h"
+#include "transformPseudo.h"
 #include "parse/parseIALUType.h"
 #include "parse/parseBType.h"
 #include "parse/parseRALUType.h"
@@ -26,9 +26,6 @@ std::string assembleLine(std::string line, std::vector<LabelSection> labels) {
     std::string fw = utils::getFirstWord(line);
 
     std::string data = assembleInst(line, labels);
-    if (!data.empty()) return data;
-
-    else data = assemblePseudo(line, labels);
     if (!data.empty()) return data;
 
     else {

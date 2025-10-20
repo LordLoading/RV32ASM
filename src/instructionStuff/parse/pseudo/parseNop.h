@@ -9,8 +9,8 @@
 #include "../../assembleInst.h"
 #include "../../../LabelSection.h"
 
-std::string parseNop(std::string str, std::vector<LabelSection> labels) {
-    return assembleInst("addi x0, x0, 0", labels);
+std::string parseNop(std::string str) {
+    return "addi x0, x0, 0 \n";
 }
 
 #endif //PARSENOP_H

@@ -9,10 +9,10 @@
 
 #include "../../assembleInst.h"
 
-std::string parseNeg(std::string line, std::vector<LabelSection> labels) {
+std::string parseNeg(std::string line) {
     std::vector<std::string> tokens = iUtils::getParamsFromLine(line);
 
-    return assembleInst(std::format("sub ", tokens[0], ", x0, ", tokens[1]), labels);
+    return "sub " + tokens[0] + ", x0, " + tokens[1] + "\n";
 }
 
 #endif //PARSENEG_H

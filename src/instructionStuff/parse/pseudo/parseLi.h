@@ -11,7 +11,7 @@
 #include "../../../dUtils.h"
 #include "../../assembleInst.h"
 
-std::string parseLi(std::string str, std::vector<LabelSection> labels) {
+std::string parseLi(std::string str) {
     std::vector<std::string> tokens = iUtils::getParamsFromLine(str);
 
     const int num = dUtils::parseAuto(tokens[1], labels);
@@ -27,9 +27,7 @@ std::string parseLi(std::string str, std::vector<LabelSection> labels) {
     std::string upperInst = "lui " + tokens[0] + ", " + std::to_string(upper);
     std::string lowerInst = "addi " + tokens[0] + ", " + tokens[0] + ", " + std::to_string(lower);
 
-    std::cout << ", lowerInst: " << lowerInst << std::endl;
-
-    return assembleInst(upperInst, labels) + assembleInst(lowerInst, labels);
+    return upperInst + "\n" + lowerInst + "\n";
 };
 
 #endif //PARSELI_H

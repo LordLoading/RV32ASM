@@ -11,15 +11,10 @@
 #include "parseLi.h"
 #include "../../assembleInst.h"
 
-std::string parseCall(std::string str, std::vector<LabelSection> labels) {
+std::string parseCall(std::string str) {
     std::vector<std::string> tokens = iUtils::getParamsFromLine(str);
 
-    //const int num = dUtils::parseAuto(tokens[1], labels);
-
-    std::string li = parseLi("li ra, " + tokens[0], labels);
-    std::string j = assembleInst("jalr ra, 0(ra)", labels);
-
-    return li + j;
+    return "li ra, " + tokens[0] + "\n jalr ra, 0(ra) \n";
 };
 
 #endif //PARSECALL_H

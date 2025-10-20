@@ -7,10 +7,10 @@
 
 #include "../../assembleInst.h"
 
-std::string parseJr(std::string line, std::vector<LabelSection> labels) {
+std::string parseJr(std::string line) {
     std::vector<std::string> tokens = iUtils::getParamsFromLine(line);
 
-    return assembleInst(std::format("jalr ", "x0, ", tokens[0]), labels);
+    return "jalr x0, " + tokens[0] + "\n";
 }
 
 #endif //PARSEJR_H

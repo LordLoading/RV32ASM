@@ -6,10 +6,10 @@
 #define PARSEJ_H
 #include "../../assembleInst.h"
 
-std::string parseJ(std::string line, std::vector<LabelSection> labels) {
+std::string parseJ(std::string line) {
     std::vector<std::string> tokens = iUtils::getParamsFromLine(line);
 
-    return assembleInst(std::format("jal ", "x0, ", tokens[0]), labels);
+    return "jal ", "x0, " + tokens[0] + "\n";
 }
 
 #endif //PARSEJ_H
