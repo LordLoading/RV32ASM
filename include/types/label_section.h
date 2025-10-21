@@ -24,6 +24,9 @@ public:
 
     int calculateSize();
     [[nodiscard]] bool isText() const;
+
+    // Apply optimizations to this section's instructions
+    void optimize(bool verbose = false);
 };
 
 #endif // LABELSECTION_H

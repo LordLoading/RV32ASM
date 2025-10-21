@@ -15,6 +15,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/finnrades/CLionProjects/RV32ASM/src/lookup/pseudo.cpp" "CMakeFiles/RV32ASM.dir/src/lookup/pseudo.cpp.o" "gcc" "CMakeFiles/RV32ASM.dir/src/lookup/pseudo.cpp.o.d"
   "/Users/finnrades/CLionProjects/RV32ASM/src/lookup/register.cpp" "CMakeFiles/RV32ASM.dir/src/lookup/register.cpp.o" "gcc" "CMakeFiles/RV32ASM.dir/src/lookup/register.cpp.o.d"
   "/Users/finnrades/CLionProjects/RV32ASM/src/main.cpp" "CMakeFiles/RV32ASM.dir/src/main.cpp.o" "gcc" "CMakeFiles/RV32ASM.dir/src/main.cpp.o.d"
+  "/Users/finnrades/CLionProjects/RV32ASM/src/optimizer/instruction_ir.cpp" "CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.o" "gcc" "CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.o.d"
+  "/Users/finnrades/CLionProjects/RV32ASM/src/optimizer/optimizer.cpp" "CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.o" "gcc" "CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.o.d"
   "/Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/b_type.cpp" "CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.o" "gcc" "CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.o.d"
   "/Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/env_type.cpp" "CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.o" "gcc" "CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.o.d"
   "/Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/i_type.cpp" "CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.o" "gcc" "CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.o.d"

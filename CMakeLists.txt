@@ -9,7 +9,6 @@ configure_file(${CMAKE_SOURCE_DIR}/assembleMe.s ${CMAKE_BINARY_DIR}/assembleMe.s
 file(GLOB_RECURSE PROJECT_SOURCES
         "${CMAKE_SOURCE_DIR}/src/*.cpp"
         "${CMAKE_SOURCE_DIR}/include/*.h"
-        "${CMAKE_SOURCE_DIR}/include/*.hpp"
 )
 
 add_executable(RV32ASM ${PROJECT_SOURCES})
@@ -22,5 +21,4 @@ target_include_directories(RV32ASM PRIVATE
 set_property(GLOBAL PROPERTY CMAKE_CONFIGURE_DEPENDS
         "${CMAKE_SOURCE_DIR}/src/*.cpp"
         "${CMAKE_SOURCE_DIR}/include/*.h"
-        "${CMAKE_SOURCE_DIR}/include/*.hpp"
 )

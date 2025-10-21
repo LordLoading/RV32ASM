@@ -13,5 +13,6 @@
 std::string parseMv(const std::string& line, const std::vector<LabelSection>& labels) {
     std::vector<std::string> tokens = iUtils::getParamsFromLine(line);
 
-    return assembleInst(std::format("addi ", tokens[0], ", x0, ", tokens[1]), labels);
+    // mv rd, rs -> addi rd, rs, 0
+    return assembleInst(std::format("addi {}, {}, 0", tokens[0], tokens[1]), labels);
 }

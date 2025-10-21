@@ -170,10 +170,38 @@ CMakeFiles/RV32ASM.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RV32ASM.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/finnrades/CLionProjects/RV32ASM/src/main.cpp -o CMakeFiles/RV32ASM.dir/src/main.cpp.s
 
+CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
+CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/optimizer/instruction_ir.cpp
+CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.o -MF CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/optimizer/instruction_ir.cpp
+
+CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/finnrades/CLionProjects/RV32ASM/src/optimizer/instruction_ir.cpp > CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.i
+
+CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/finnrades/CLionProjects/RV32ASM/src/optimizer/instruction_ir.cpp -o CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.s
+
+CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
+CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/optimizer/optimizer.cpp
+CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.o -MF CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/optimizer/optimizer.cpp
+
+CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/finnrades/CLionProjects/RV32ASM/src/optimizer/optimizer.cpp > CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.i
+
+CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/finnrades/CLionProjects/RV32ASM/src/optimizer/optimizer.cpp -o CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.s
+
 CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/b_type.cpp
 CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/b_type.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.i: cmake_force
@@ -187,7 +215,7 @@ CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/env_type.cpp
 CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/env_type.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.i: cmake_force
@@ -201,7 +229,7 @@ CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/i_type.cpp
 CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/i_type.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.i: cmake_force
@@ -215,7 +243,7 @@ CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/instruction/j_type.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/instruction/j_type.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/j_type.cpp
 CMakeFiles/RV32ASM.dir/src/parser/instruction/j_type.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/j_type.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/j_type.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/instruction/j_type.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/instruction/j_type.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/instruction/j_type.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/j_type.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/instruction/j_type.cpp.i: cmake_force
@@ -229,7 +257,7 @@ CMakeFiles/RV32ASM.dir/src/parser/instruction/j_type.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/instruction/l_type.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/instruction/l_type.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/l_type.cpp
 CMakeFiles/RV32ASM.dir/src/parser/instruction/l_type.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/l_type.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/l_type.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/instruction/l_type.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/instruction/l_type.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/instruction/l_type.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/l_type.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/instruction/l_type.cpp.i: cmake_force
@@ -243,7 +271,7 @@ CMakeFiles/RV32ASM.dir/src/parser/instruction/l_type.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/instruction/r_type.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/instruction/r_type.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/r_type.cpp
 CMakeFiles/RV32ASM.dir/src/parser/instruction/r_type.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/r_type.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/r_type.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/instruction/r_type.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/instruction/r_type.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/instruction/r_type.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/r_type.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/instruction/r_type.cpp.i: cmake_force
@@ -257,7 +285,7 @@ CMakeFiles/RV32ASM.dir/src/parser/instruction/r_type.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/instruction/s_type.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/instruction/s_type.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/s_type.cpp
 CMakeFiles/RV32ASM.dir/src/parser/instruction/s_type.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/s_type.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/s_type.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/instruction/s_type.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/instruction/s_type.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/instruction/s_type.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/s_type.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/instruction/s_type.cpp.i: cmake_force
@@ -271,7 +299,7 @@ CMakeFiles/RV32ASM.dir/src/parser/instruction/s_type.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/instruction/u_type.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/instruction/u_type.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/u_type.cpp
 CMakeFiles/RV32ASM.dir/src/parser/instruction/u_type.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/u_type.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/instruction/u_type.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/instruction/u_type.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/instruction/u_type.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/instruction/u_type.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/instruction/u_type.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/instruction/u_type.cpp.i: cmake_force
@@ -285,7 +313,7 @@ CMakeFiles/RV32ASM.dir/src/parser/instruction/u_type.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/call.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/call.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/call.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/call.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/call.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/call.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/call.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/call.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/call.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/call.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/call.cpp.i: cmake_force
@@ -299,7 +327,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/call.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/j.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/j.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/j.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/j.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/j.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/j.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/j.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/j.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/j.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/j.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/j.cpp.i: cmake_force
@@ -313,7 +341,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/j.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/jr.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/jr.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/jr.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/jr.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/jr.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/jr.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/jr.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/jr.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/jr.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/jr.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/jr.cpp.i: cmake_force
@@ -327,7 +355,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/jr.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/li.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/li.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/li.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/li.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/li.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/li.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/li.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/li.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/li.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/li.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/li.cpp.i: cmake_force
@@ -341,7 +369,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/li.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/mv.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/mv.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/mv.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/mv.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/mv.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/mv.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/mv.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/mv.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/mv.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/mv.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/mv.cpp.i: cmake_force
@@ -355,7 +383,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/mv.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/neg.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/neg.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/neg.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/neg.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/neg.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/neg.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/neg.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/neg.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/neg.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/neg.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/neg.cpp.i: cmake_force
@@ -369,7 +397,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/neg.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/nop.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/nop.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/nop.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/nop.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/nop.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/nop.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/nop.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/nop.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/nop.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/nop.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/nop.cpp.i: cmake_force
@@ -383,7 +411,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/nop.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/not.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/not.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/not.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/not.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/not.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/not.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/not.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/not.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/not.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/not.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/not.cpp.i: cmake_force
@@ -397,7 +425,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/not.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_b.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_b.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/pop_b.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_b.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_b.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_b.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_b.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_b.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_b.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/pop_b.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_b.cpp.i: cmake_force
@@ -411,7 +439,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_b.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_frame.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_frame.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/pop_frame.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_frame.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_frame.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_frame.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_frame.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_frame.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_frame.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/pop_frame.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_frame.cpp.i: cmake_force
@@ -425,7 +453,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_frame.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_h.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_h.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/pop_h.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_h.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_h.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_h.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_h.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_h.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_h.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/pop_h.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_h.cpp.i: cmake_force
@@ -439,7 +467,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_h.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_w.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_w.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/pop_w.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_w.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_w.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_w.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_w.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_w.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_w.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/pop_w.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_w.cpp.i: cmake_force
@@ -453,7 +481,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/pop_w.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_b.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_b.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/push_b.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_b.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_b.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_b.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_b.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_b.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_b.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/push_b.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_b.cpp.i: cmake_force
@@ -467,7 +495,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_b.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_frame.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_frame.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/push_frame.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_frame.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_frame.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_frame.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_frame.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_frame.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_frame.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/push_frame.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_frame.cpp.i: cmake_force
@@ -481,7 +509,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_frame.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_h.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_h.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/push_h.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_h.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_h.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_h.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_h.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_h.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_h.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/push_h.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_h.cpp.i: cmake_force
@@ -495,7 +523,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_h.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_w.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_w.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/push_w.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_w.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_w.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_w.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_w.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_w.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_w.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/push_w.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_w.cpp.i: cmake_force
@@ -509,7 +537,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/push_w.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/ret.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/ret.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/ret.cpp
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/ret.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/ret.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/RV32ASM.dir/src/parser/pseudo/ret.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/parser/pseudo/ret.cpp.o -MF CMakeFiles/RV32ASM.dir/src/parser/pseudo/ret.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/parser/pseudo/ret.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/parser/pseudo/ret.cpp
 
 CMakeFiles/RV32ASM.dir/src/parser/pseudo/ret.cpp.i: cmake_force
@@ -523,7 +551,7 @@ CMakeFiles/RV32ASM.dir/src/parser/pseudo/ret.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/types/label_section.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/types/label_section.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/types/label_section.cpp
 CMakeFiles/RV32ASM.dir/src/types/label_section.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/RV32ASM.dir/src/types/label_section.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/RV32ASM.dir/src/types/label_section.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/types/label_section.cpp.o -MF CMakeFiles/RV32ASM.dir/src/types/label_section.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/types/label_section.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/types/label_section.cpp
 
 CMakeFiles/RV32ASM.dir/src/types/label_section.cpp.i: cmake_force
@@ -537,7 +565,7 @@ CMakeFiles/RV32ASM.dir/src/types/label_section.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/utils/common.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/utils/common.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/utils/common.cpp
 CMakeFiles/RV32ASM.dir/src/utils/common.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/RV32ASM.dir/src/utils/common.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/RV32ASM.dir/src/utils/common.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/utils/common.cpp.o -MF CMakeFiles/RV32ASM.dir/src/utils/common.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/utils/common.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/utils/common.cpp
 
 CMakeFiles/RV32ASM.dir/src/utils/common.cpp.i: cmake_force
@@ -551,7 +579,7 @@ CMakeFiles/RV32ASM.dir/src/utils/common.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/utils/data.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/utils/data.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/utils/data.cpp
 CMakeFiles/RV32ASM.dir/src/utils/data.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/RV32ASM.dir/src/utils/data.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/RV32ASM.dir/src/utils/data.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/utils/data.cpp.o -MF CMakeFiles/RV32ASM.dir/src/utils/data.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/utils/data.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/utils/data.cpp
 
 CMakeFiles/RV32ASM.dir/src/utils/data.cpp.i: cmake_force
@@ -565,7 +593,7 @@ CMakeFiles/RV32ASM.dir/src/utils/data.cpp.s: cmake_force
 CMakeFiles/RV32ASM.dir/src/utils/instruction.cpp.o: CMakeFiles/RV32ASM.dir/flags.make
 CMakeFiles/RV32ASM.dir/src/utils/instruction.cpp.o: /Users/finnrades/CLionProjects/RV32ASM/src/utils/instruction.cpp
 CMakeFiles/RV32ASM.dir/src/utils/instruction.cpp.o: CMakeFiles/RV32ASM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/RV32ASM.dir/src/utils/instruction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/RV32ASM.dir/src/utils/instruction.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RV32ASM.dir/src/utils/instruction.cpp.o -MF CMakeFiles/RV32ASM.dir/src/utils/instruction.cpp.o.d -o CMakeFiles/RV32ASM.dir/src/utils/instruction.cpp.o -c /Users/finnrades/CLionProjects/RV32ASM/src/utils/instruction.cpp
 
 CMakeFiles/RV32ASM.dir/src/utils/instruction.cpp.i: cmake_force
@@ -585,6 +613,8 @@ RV32ASM_OBJECTS = \
 "CMakeFiles/RV32ASM.dir/src/lookup/pseudo.cpp.o" \
 "CMakeFiles/RV32ASM.dir/src/lookup/register.cpp.o" \
 "CMakeFiles/RV32ASM.dir/src/main.cpp.o" \
+"CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.o" \
+"CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.o" \
 "CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.o" \
 "CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.o" \
 "CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.o" \
@@ -625,6 +655,8 @@ RV32ASM: CMakeFiles/RV32ASM.dir/src/lookup/instruction.cpp.o
 RV32ASM: CMakeFiles/RV32ASM.dir/src/lookup/pseudo.cpp.o
 RV32ASM: CMakeFiles/RV32ASM.dir/src/lookup/register.cpp.o
 RV32ASM: CMakeFiles/RV32ASM.dir/src/main.cpp.o
+RV32ASM: CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.o
+RV32ASM: CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.o
 RV32ASM: CMakeFiles/RV32ASM.dir/src/parser/instruction/b_type.cpp.o
 RV32ASM: CMakeFiles/RV32ASM.dir/src/parser/instruction/env_type.cpp.o
 RV32ASM: CMakeFiles/RV32ASM.dir/src/parser/instruction/i_type.cpp.o
@@ -656,7 +688,7 @@ RV32ASM: CMakeFiles/RV32ASM.dir/src/utils/data.cpp.o
 RV32ASM: CMakeFiles/RV32ASM.dir/src/utils/instruction.cpp.o
 RV32ASM: CMakeFiles/RV32ASM.dir/build.make
 RV32ASM: CMakeFiles/RV32ASM.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Linking CXX executable RV32ASM"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Linking CXX executable RV32ASM"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RV32ASM.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

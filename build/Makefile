@@ -304,6 +304,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RV32ASM.dir/build.make CMakeFiles/RV32ASM.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/optimizer/instruction_ir.o: src/optimizer/instruction_ir.cpp.o
+.PHONY : src/optimizer/instruction_ir.o
+
+# target to build an object file
+src/optimizer/instruction_ir.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RV32ASM.dir/build.make CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.o
+.PHONY : src/optimizer/instruction_ir.cpp.o
+
+src/optimizer/instruction_ir.i: src/optimizer/instruction_ir.cpp.i
+.PHONY : src/optimizer/instruction_ir.i
+
+# target to preprocess a source file
+src/optimizer/instruction_ir.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RV32ASM.dir/build.make CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.i
+.PHONY : src/optimizer/instruction_ir.cpp.i
+
+src/optimizer/instruction_ir.s: src/optimizer/instruction_ir.cpp.s
+.PHONY : src/optimizer/instruction_ir.s
+
+# target to generate assembly for a file
+src/optimizer/instruction_ir.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RV32ASM.dir/build.make CMakeFiles/RV32ASM.dir/src/optimizer/instruction_ir.cpp.s
+.PHONY : src/optimizer/instruction_ir.cpp.s
+
+src/optimizer/optimizer.o: src/optimizer/optimizer.cpp.o
+.PHONY : src/optimizer/optimizer.o
+
+# target to build an object file
+src/optimizer/optimizer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RV32ASM.dir/build.make CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.o
+.PHONY : src/optimizer/optimizer.cpp.o
+
+src/optimizer/optimizer.i: src/optimizer/optimizer.cpp.i
+.PHONY : src/optimizer/optimizer.i
+
+# target to preprocess a source file
+src/optimizer/optimizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RV32ASM.dir/build.make CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.i
+.PHONY : src/optimizer/optimizer.cpp.i
+
+src/optimizer/optimizer.s: src/optimizer/optimizer.cpp.s
+.PHONY : src/optimizer/optimizer.s
+
+# target to generate assembly for a file
+src/optimizer/optimizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RV32ASM.dir/build.make CMakeFiles/RV32ASM.dir/src/optimizer/optimizer.cpp.s
+.PHONY : src/optimizer/optimizer.cpp.s
+
 src/parser/instruction/b_type.o: src/parser/instruction/b_type.cpp.o
 .PHONY : src/parser/instruction/b_type.o
 
@@ -1031,6 +1079,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/optimizer/instruction_ir.o"
+	@echo "... src/optimizer/instruction_ir.i"
+	@echo "... src/optimizer/instruction_ir.s"
+	@echo "... src/optimizer/optimizer.o"
+	@echo "... src/optimizer/optimizer.i"
+	@echo "... src/optimizer/optimizer.s"
 	@echo "... src/parser/instruction/b_type.o"
 	@echo "... src/parser/instruction/b_type.i"
 	@echo "... src/parser/instruction/b_type.s"

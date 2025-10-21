@@ -29,12 +29,16 @@ void printUsage(const char *progName) {
             << "Options:\n"
             << "  -i, --input <file>    Input assembly file (default: assembleMe.s)\n"
             << "  -o, --output <file>   Output Logisim v3 hex file (default: program_v3.hex)\n"
+            << "  -O, --optimize        Enable optimization passes\n"
+            << "  -v, --verbose         Verbose output (show optimization details)\n"
             << "  -h, --help            Show this help message\n";
 }
 
 int main(int argc, char *argv[]) {
     std::string inputFile = "assembleMe.s";
     std::string outputFile = "program_v3.hex";
+    bool optimize = false;
+    bool verbose = false;
 
     for (int i = 1; i < argc; ++i) {
         if (std::string arg = argv[i]; arg == "-i" || arg == "--input") {
@@ -51,6 +55,10 @@ int main(int argc, char *argv[]) {
                 std::cerr << arg << " requires a filename argument\n";
                 return 1;
             }
+        } else if (arg == "-O" || arg == "--optimize") {
+            optimize = true;
+        } else if (arg == "-v" || arg == "--verbose") {
+            verbose = true;
         } else if (arg == "-h" || arg == "--help") {
             printUsage(argv[0]);
             return 0;
@@ -119,6 +127,19 @@ int main(int argc, char *argv[]) {
     for (const auto& label : labels) {
         if (label.name != "main" && !label.isText()) {
             sortedLabels.push_back(label);
+        }
+    }
+
+    // Apply optimizations if requested
+    if (optimize) {
+        if (verbose) {
+            std::cout << "Running optimization passes...\n";
+        }
+        for (auto& label : sortedLabels) {
+            label.optimize(verbose);
+        }
+        if (verbose) {
+            std::cout << "Optimization complete.\n\n";
         }
     }
 
