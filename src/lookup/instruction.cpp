@@ -1,4 +1,4 @@
-#include "../../include/assembler/instruction.h"
+#include "assembler/instruction.h"
 #include "lookup/instruction.h"
 
 namespace inst {
@@ -60,5 +60,24 @@ namespace inst {
         {"rem", "ralu", 0b0110011, 0x5, 0x01},
         {"remu", "ralu", 0b0110011, 0x6, 0x01},
     };
+
+    // Initialize lookup map from vector (done once at program start)
+    const std::unordered_map<std::string, structThing> lookupMap = []() {
+        std::unordered_map<std::string, structThing> map;
+        map.reserve(lookup.size());
+        for (const auto& inst : lookup) {
+            map.emplace(inst.name, inst);
+        }
+        return map;
+    }();
+
+    // Fast O(1) lookup function
+    std::optional<structThing> find(const std::string& name) {
+        auto it = lookupMap.find(name);
+        if (it != lookupMap.end()) {
+            return it->second;
+        }
+        return std::nullopt;
+    }
 
 } // namespace inst

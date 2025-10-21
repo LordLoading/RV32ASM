@@ -10,17 +10,14 @@
 #include "utils/common.h"
 
 std::string assembleInst(const std::string& line, const std::vector<LabelSection>& labels) {
-    inst::structThing instObj;
-
     const std::string firstWord = utils::getFirstWord(line);
-    for (const auto& i : inst::lookup) {
-        if (firstWord == i.name) {
-            instObj = i;
-            break;
-        }
-    }
 
-    if (instObj.name.empty()) return "";
+    // Fast O(1) hash map lookup instead of O(n) linear search
+    auto instOpt = inst::find(firstWord);
+
+    if (!instOpt.has_value()) return "";
+
+    const inst::structThing& instObj = instOpt.value();
 
     if (instObj.fmt == "ralu") return parseRALUType(instObj, line);
     if (instObj.fmt == "ialu") return parseIALUType(instObj, line, labels);

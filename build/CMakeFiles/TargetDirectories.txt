@@ -1,0 +1,3 @@
+/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles/RV32ASM.dir
+/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles/edit_cache.dir
+/Users/finnrades/CLionProjects/RV32ASM/build/CMakeFiles/rebuild_cache.dir

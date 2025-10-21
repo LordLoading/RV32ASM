@@ -4,9 +4,10 @@
 #include <string>
 #include <iomanip>
 #include <regex>
+#include <algorithm>
 
-#include "../include/types/label_section.h"
-#include "../include/assembler/line.h"
+#include "types/label_section.h"
+#include "assembler/line.h"
 
 // the code from here...
 void exportLogisimV3_0(const std::string &bytes, const std::string &outFilename) {
@@ -97,47 +98,54 @@ int main(int argc, char *argv[]) {
 
     // figure out order of labels
     std::vector<LabelSection> sortedLabels;
+
     // always move the "main" label to the start of the program
-    for (int i = 0; i < labels.size(); ++i) {
-        LabelSection label = labels[i];
+    auto mainIt = std::find_if(labels.begin(), labels.end(),
+        [](const LabelSection& label) { return label.name == "main"; });
 
-        if (label.name == "main") {
+    if (mainIt != labels.end()) {
+        sortedLabels.push_back(*mainIt);
+        sortedLabels.back().address = 0;
+    }
+
+    // move the text sections before the data sections (excluding main which is already added)
+    for (const auto& label : labels) {
+        if (label.name != "main" && label.isText()) {
             sortedLabels.push_back(label);
-            label.address = 0;
-            labels.erase(labels.begin() + i);
-            break;
         }
     }
-    // move the text sections before the data sections
-    for (int i = 0; i < labels.size(); ++i) {
-        LabelSection label = labels[i];
 
-        if (label.isText()) {
-            sortedLabels.push_back(label);
-            labels.erase(labels.begin() + i);
-        }
-    }
     // push the rest after (only data left so no need to keep sorting)
-    for (LabelSection currentLabel: labels) {
-        sortedLabels.push_back(currentLabel);
+    for (const auto& label : labels) {
+        if (label.name != "main" && !label.isText()) {
+            sortedLabels.push_back(label);
+        }
     }
 
     //figure out addresses
-    for (int i = 0; i < sortedLabels.size(); i++) {
+    for (size_t i = 0; i < sortedLabels.size(); i++) {
         sortedLabels[i].calculateSize();
 
         if (i > 0) {
-            LabelSection prevLabel = sortedLabels[i - 1];
+            const LabelSection& prevLabel = sortedLabels[i - 1];
             sortedLabels[i].address = prevLabel.address + prevLabel.dataSize;
             std::cout << sortedLabels[i].name << ": " << sortedLabels[i].address << "\n";
         }
     }
 
-    std::string data = "";
+    std::string data;
 
-    for (LabelSection label: sortedLabels) {
-        for (std::string line: label.lines) {
-            data += assembleLine(line, sortedLabels);
+    for (const auto& label : sortedLabels) {
+        for (size_t lineIdx = 0; lineIdx < label.lines.size(); ++lineIdx) {
+            try {
+                data += assembleLine(label.lines[lineIdx], sortedLabels);
+            } catch (const std::exception& e) {
+                std::cerr << "Error in label '" << label.name
+                          << "' at line " << (lineIdx + 1)
+                          << ": " << e.what() << "\n"
+                          << "  Line content: " << label.lines[lineIdx] << "\n";
+                return 1;
+            }
         }
     }
 

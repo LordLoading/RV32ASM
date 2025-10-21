@@ -1,5 +1,5 @@
-#include "../../include/assembler/pseudo.h"
-#include "../../include/lookup/pseudo.h"
+#include "assembler/pseudo.h"
+#include "lookup/pseudo.h"
 
 namespace pseudo {
 

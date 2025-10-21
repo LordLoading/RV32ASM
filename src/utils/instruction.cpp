@@ -1,4 +1,4 @@
-#include "../../include/utils/instruction.h"
+#include "utils/instruction.h"
 #include <sstream>
 
 #include "lookup/pseudo.h"
@@ -41,10 +41,8 @@ namespace iUtils {
 
     bool isInstruction(const std::string& str) {
         const std::string word = utils::getFirstWord(str);
-        for (const auto& inst : inst::lookup) {
-            if (inst.name == word) return true;
-        }
-        return false;
+        // Use fast O(1) hash map lookup instead of O(n) linear search
+        return inst::find(word).has_value();
     }
 
     int getPseudoSize(const std::string& line) {
@@ -65,7 +63,8 @@ namespace iUtils {
         if (firstWord == ".string") {
             const size_t firstChar = line.find_first_of('\"');
             const size_t secondChar = line.find('\"', firstChar + 1);
-            return static_cast<int>(secondChar - firstChar);
+            // Calculate string length between quotes, plus 1 for null terminator
+            return static_cast<int>(secondChar - firstChar - 1 + 1);
         }
 
         if (elemSize != 0) {
