@@ -5,6 +5,7 @@
 #include <iomanip>
 #include <regex>
 #include <algorithm>
+#include <cstdint>
 
 #include "types/label_section.h"
 #include "assembler/line.h"
