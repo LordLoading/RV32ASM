@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="4.0.0" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v4.0.0(https://github.com/logisim-evolution/).
+<project source="4.1.0dev" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v4.1.0dev(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -40,14 +40,13 @@
       <a name="incoming" val="32"/>
     </tool>
     <tool name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="type" val="output"/>
     </tool>
     <tool name="Probe">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="radix" val="10signed"/>
-    </tool>
-    <tool name="Clock">
-      <a name="appearance" val="NewPins"/>
     </tool>
     <tool name="Constant">
       <a name="facing" val="north"/>
@@ -170,16 +169,18 @@
   <circuit name="main">
     <a name="circuit" val="main"/>
     <a name="simulationFrequency" val="32.0"/>
-    <comp lib="0" loc="(320,100)" name="Bit Extender">
+    <comp lib="0" loc="(140,100)" name="Bit Extender">
       <a name="in_width" val="32"/>
       <a name="out_width" val="7"/>
       <a name="type" val="zero"/>
     </comp>
-    <comp lib="5" loc="(100,290)" name="LedBar">
-      <a name="inputtype" val="row"/>
-      <a name="matrixcols" val="32"/>
+    <comp lib="0" loc="(450,160)" name="Bit Extender">
+      <a name="in_width" val="7"/>
+      <a name="out_width" val="32"/>
+      <a name="type" val="zero"/>
     </comp>
-    <comp lib="5" loc="(340,130)" name="TTY"/>
+    <comp lib="5" loc="(160,130)" name="TTY"/>
+    <comp lib="5" loc="(180,160)" name="Keyboard"/>
     <comp lib="5" loc="(570,420)" name="LedBar">
       <a name="inputtype" val="row"/>
       <a name="matrixcols" val="32"/>
@@ -198,6 +199,9 @@
     <comp loc="(480,350)" name="RAM_module">
       <a name="facing" val="south"/>
     </comp>
+    <comp loc="(490,180)" name="IO_bus_node">
+      <a name="facing" val="west"/>
+    </comp>
     <comp loc="(490,250)" name="IO_bus_node">
       <a name="facing" val="west"/>
     </comp>
@@ -210,15 +214,22 @@
     <comp loc="(490,490)" name="CPU">
       <a name="facing" val="north"/>
     </comp>
-    <wire from="(270,100)" to="(270,220)"/>
-    <wire from="(270,100)" to="(280,100)"/>
-    <wire from="(270,220)" to="(490,220)"/>
-    <wire from="(320,100)" to="(330,100)"/>
-    <wire from="(330,100)" to="(330,120)"/>
-    <wire from="(330,120)" to="(340,120)"/>
-    <wire from="(330,130)" to="(330,240)"/>
-    <wire from="(330,130)" to="(340,130)"/>
-    <wire from="(330,240)" to="(490,240)"/>
+    <wire from="(140,100)" to="(150,100)"/>
+    <wire from="(150,100)" to="(150,120)"/>
+    <wire from="(150,120)" to="(160,120)"/>
+    <wire from="(150,130)" to="(150,240)"/>
+    <wire from="(150,130)" to="(160,130)"/>
+    <wire from="(150,240)" to="(490,240)"/>
+    <wire from="(170,160)" to="(170,190)"/>
+    <wire from="(170,160)" to="(180,160)"/>
+    <wire from="(170,190)" to="(470,190)"/>
+    <wire from="(320,170)" to="(320,180)"/>
+    <wire from="(320,180)" to="(380,180)"/>
+    <wire from="(380,160)" to="(380,180)"/>
+    <wire from="(380,160)" to="(410,160)"/>
+    <wire from="(450,160)" to="(490,160)"/>
+    <wire from="(470,170)" to="(470,190)"/>
+    <wire from="(470,170)" to="(490,170)"/>
     <wire from="(480,280)" to="(490,280)"/>
     <wire from="(480,290)" to="(490,290)"/>
     <wire from="(480,300)" to="(490,300)"/>
@@ -229,32 +240,38 @@
     <wire from="(480,370)" to="(490,370)"/>
     <wire from="(480,380)" to="(490,380)"/>
     <wire from="(480,390)" to="(490,390)"/>
+    <wire from="(500,190)" to="(500,200)"/>
     <wire from="(500,260)" to="(500,270)"/>
     <wire from="(500,330)" to="(500,340)"/>
     <wire from="(500,400)" to="(500,490)"/>
+    <wire from="(510,190)" to="(510,200)"/>
     <wire from="(510,260)" to="(510,270)"/>
     <wire from="(510,330)" to="(510,340)"/>
     <wire from="(510,400)" to="(510,490)"/>
+    <wire from="(520,190)" to="(520,200)"/>
     <wire from="(520,260)" to="(520,270)"/>
     <wire from="(520,330)" to="(520,340)"/>
     <wire from="(520,400)" to="(520,480)"/>
     <wire from="(520,480)" to="(520,490)"/>
     <wire from="(520,480)" to="(570,480)"/>
+    <wire from="(530,190)" to="(530,200)"/>
     <wire from="(530,260)" to="(530,270)"/>
     <wire from="(530,330)" to="(530,340)"/>
     <wire from="(530,400)" to="(530,450)"/>
     <wire from="(530,450)" to="(530,490)"/>
     <wire from="(530,450)" to="(570,450)"/>
+    <wire from="(540,190)" to="(540,200)"/>
     <wire from="(540,260)" to="(540,270)"/>
     <wire from="(540,330)" to="(540,340)"/>
     <wire from="(540,400)" to="(540,420)"/>
     <wire from="(540,420)" to="(540,490)"/>
     <wire from="(540,420)" to="(570,420)"/>
+    <wire from="(550,190)" to="(550,200)"/>
     <wire from="(550,260)" to="(550,270)"/>
     <wire from="(550,330)" to="(550,340)"/>
-    <wire from="(90,220)" to="(270,220)"/>
-    <wire from="(90,220)" to="(90,290)"/>
-    <wire from="(90,290)" to="(100,290)"/>
+    <wire from="(90,100)" to="(100,100)"/>
+    <wire from="(90,100)" to="(90,220)"/>
+    <wire from="(90,220)" to="(490,220)"/>
   </circuit>
   <circuit name="CPU">
     <a name="appearance" val="custom"/>
@@ -276,12 +293,14 @@
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(460,450)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Data_size"/>
       <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(520,450)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="WE"/>
       <a name="type" val="output"/>
@@ -290,17 +309,20 @@
       <a name="appearance" val="NewPins"/>
     </comp>
     <comp lib="0" loc="(580,450)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Data_in"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(660,450)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Data_out"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(740,450)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Address"/>
       <a name="type" val="output"/>
@@ -590,15 +612,18 @@
       <circ-port dir="out" pin="620,280" x="100" y="60"/>
     </appear>
     <comp lib="0" loc="(170,900)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="label" val="funct3"/>
       <a name="width" val="3"/>
     </comp>
     <comp lib="0" loc="(220,390)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="label" val="A"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(220,470)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="label" val="B"/>
       <a name="width" val="32"/>
     </comp>
@@ -607,6 +632,7 @@
       <a name="incoming" val="7"/>
     </comp>
     <comp lib="0" loc="(230,900)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="label" val="funct7"/>
       <a name="width" val="7"/>
@@ -711,6 +737,7 @@
       <a name="type" val="zero"/>
     </comp>
     <comp lib="0" loc="(620,280)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
@@ -962,82 +989,97 @@
       <a name="incoming" val="4"/>
     </comp>
     <comp lib="0" loc="(1330,360)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="inst_type"/>
       <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1330,390)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="regStr"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(1330,430)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="rd"/>
       <a name="type" val="output"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(1330,450)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="rs1"/>
       <a name="type" val="output"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(1330,470)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="rs2"/>
       <a name="type" val="output"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(1330,500)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="funct3"/>
       <a name="type" val="output"/>
       <a name="width" val="3"/>
     </comp>
     <comp lib="0" loc="(1330,520)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="funct7"/>
       <a name="type" val="output"/>
       <a name="width" val="7"/>
     </comp>
     <comp lib="0" loc="(1330,590)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Data_out"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(1330,660)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="should_branch"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(1330,690)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="mem_enable"/>
       <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1330,860)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Address"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(210,1550)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="label" val="s1"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(210,1630)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="label" val="s2"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(210,1710)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="label" val="PC"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(210,430)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(220,1320)" name="Splitter">
@@ -1744,6 +1786,7 @@
     <a name="circuit" val="opDecoder"/>
     <a name="simulationFrequency" val="32.0"/>
     <comp lib="0" loc="(450,190)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="width" val="7"/>
     </comp>
     <comp lib="0" loc="(470,190)" name="Splitter">
@@ -1787,51 +1830,61 @@
       <a name="incoming" val="7"/>
     </comp>
     <comp lib="0" loc="(540,150)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="ALU"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(540,230)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="ALUimm"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(540,310)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="load"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(540,390)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="store"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(540,470)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="branch"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(540,550)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="jal"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(540,630)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="jalr"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(540,710)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="lui"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(540,790)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="auipc"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(540,870)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="dunno"/>
       <a name="type" val="output"/>
@@ -1971,33 +2024,40 @@
     <a name="circuit" val="regs"/>
     <a name="simulationFrequency" val="32.0"/>
     <comp lib="0" loc="(1160,460)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="s1"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(1160,810)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="s2"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(230,2580)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="label" val="reg_save"/>
     </comp>
     <comp lib="0" loc="(230,2600)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="label" val="rd"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(230,2620)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="label" val="rs1"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(230,2640)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="label" val="rs2"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(230,2690)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="label" val="data_in"/>
       <a name="width" val="32"/>
     </comp>
@@ -2540,26 +2600,31 @@
     <a name="circuit" val="RAM_module"/>
     <a name="simulationFrequency" val="32.0"/>
     <comp lib="0" loc="(140,320)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Adress"/>
       <a name="width" val="24"/>
     </comp>
     <comp lib="0" loc="(220,320)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Data_in"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(300,320)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Data_out"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(370,320)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="WE"/>
     </comp>
     <comp lib="0" loc="(430,320)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Data_size"/>
       <a name="width" val="4"/>
@@ -2727,17 +2792,23 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="32.0"/>
     <comp lib="0" loc="(390,330)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(390,350)" name="Pin"/>
+    <comp lib="0" loc="(390,350)" name="Pin">
+      <a name="appearance" val="classic"/>
+    </comp>
     <comp lib="0" loc="(390,400)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(390,480)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(390,560)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="width" val="24"/>
     </comp>
     <comp lib="0" loc="(390,560)" name="Splitter">
@@ -2929,12 +3000,14 @@
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(170,240)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="behavior" val="pulldown"/>
       <a name="facing" val="south"/>
       <a name="label" val="node_index"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(200,740)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="type" val="output"/>
       <a name="width" val="8"/>
@@ -2951,49 +3024,59 @@
       <a name="incoming" val="32"/>
     </comp>
     <comp lib="0" loc="(400,740)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(410,240)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Address_in"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(480,740)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(490,240)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Data_out"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(560,740)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(570,240)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Data_in"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(630,740)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(640,240)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="WE"/>
     </comp>
     <comp lib="0" loc="(700,740)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(710,240)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Data_size"/>
       <a name="width" val="4"/>
@@ -3004,25 +3087,30 @@
       <a name="type" val="zero"/>
     </comp>
     <comp lib="0" loc="(790,460)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="type" val="output"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(790,480)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="WE_out"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(790,530)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(790,610)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(790,690)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Address_out"/>
       <a name="type" val="output"/>
@@ -3114,49 +3202,60 @@
       <circ-port dir="out" pin="550,980" x="140" y="100"/>
     </appear>
     <comp lib="0" loc="(320,260)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="label" val="char_value"/>
       <a name="width" val="7"/>
     </comp>
     <comp lib="0" loc="(320,280)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="label" val="write_char"/>
     </comp>
     <comp lib="0" loc="(320,350)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="label" val="read_char"/>
     </comp>
     <comp lib="0" loc="(390,320)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="clear_screen"/>
     </comp>
     <comp lib="0" loc="(390,380)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="clear_buffer"/>
     </comp>
     <comp lib="0" loc="(390,980)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="label" val="Adress"/>
       <a name="width" val="24"/>
     </comp>
     <comp lib="0" loc="(460,380)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="type" val="output"/>
       <a name="width" val="7"/>
     </comp>
     <comp lib="0" loc="(470,980)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="label" val="Data_in"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(550,980)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="label" val="Data_out"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(620,980)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="label" val="WE"/>
     </comp>
     <comp lib="0" loc="(680,980)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
       <a name="label" val="Data_size"/>
       <a name="width" val="4"/>
@@ -3167,17 +3266,23 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="32.0"/>
     <comp lib="0" loc="(360,180)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(360,200)" name="Pin"/>
+    <comp lib="0" loc="(360,200)" name="Pin">
+      <a name="appearance" val="classic"/>
+    </comp>
     <comp lib="0" loc="(360,250)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="type" val="output"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(360,330)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(360,410)" name="Pin">
+      <a name="appearance" val="classic"/>
       <a name="width" val="24"/>
     </comp>
     <comp lib="0" loc="(360,460)" name="Clock">
