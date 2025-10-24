@@ -12,8 +12,9 @@ strLoop:
     lb t0, 0(t1)
     addi t1, t1, 1
     beq t0, x0, 8
-    j 8;
+    jal x0, 16
     call keyboardSetup
+    addi t0, t0, 1
     sb t0, 0(t2)
     call strLoop
 
@@ -23,9 +24,10 @@ keyboardSetup:
     call keyboardLoop
 
 keyboardLoop:
-    lbu t0, 0(keyboard)
-    sb t0, 0(keyboard)
-    sb t2,
+    lbu t0, 0(t3)
+    sb t0, 0(t3)
+    sb t0, 0(t2)
+    call keyboardLoop
 
 msg:
     .string "alerta alerta antifacista!"
