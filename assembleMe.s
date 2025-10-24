@@ -12,7 +12,7 @@ strLoop:
     lb t0, 0(t1)
     addi t1, t1, 1
     beq t0, x0, 8
-    jal x0, 16
+    jal x0, 20
     call keyboardSetup
     addi t0, t0, 1
     sb t0, 0(t2)
