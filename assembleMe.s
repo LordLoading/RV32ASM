@@ -1,39 +1,52 @@
 main:
-    call setup
-    call strLoop
+    li t0, 0x80000000
+    call gameLoop
 
-setup:
-    li t2, terminal
-    lw t2, 0(t2)
-    li t1, msg
-    ret
+gameLoop:
+    sri
+    call gameloop
 
-strLoop:
-    lb t0, 0(t1)
-    addi t1, t1, 1
-    beq t0, x0, 8
-    jal x0, 20
-    call keyboardSetup
-    addi t0, t0, 1
-    sb t0, 0(t2)
-    call strLoop
+thingy:
+    .byte 0
 
-keyboardSetup:
-    li t3, keyboard
-    lw t3, 0(t3)
-    call keyboardLoop
+ball:
+    .byte 8
+    .byte 8
 
-keyboardLoop:
-    lbu t0, 0(t3)
-    sb t0, 0(t3)
-    sb t0, 0(t2)
-    call keyboardLoop
+ballDir:
+    .byte 1
+    .byte 1
 
-msg:
-    .string "alerta alerta antifacista!"
-
-terminal:
-    .word 0x02000000
-
-keyboard:
-    .word 0x03000000
+frame:
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
+    .word 0
